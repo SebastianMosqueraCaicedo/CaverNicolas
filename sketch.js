@@ -1,7 +1,7 @@
-test = new Ent
+test = new Ent (200,200)
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(700, 550);
 }
 
 function draw() {

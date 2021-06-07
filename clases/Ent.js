@@ -10,6 +10,8 @@ class Ent {
     }
     draw() {
         console.log("test");
+        fill(255);
+        rect(this.x,this.y,30,30);
     }
     parametros() {
 
