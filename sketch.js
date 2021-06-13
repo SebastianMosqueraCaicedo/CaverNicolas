@@ -10,8 +10,9 @@ let imghormigaverde
 let imgmurcielago
 let imgserpientenormal
 let imgserpienteroja
+let imgactorderecha;
 
-
+// nicolas
 
 
 function preload() {
@@ -26,7 +27,10 @@ function preload() {
   imgmurcielago = loadImage ('data/bichos/murcielago.png');
   imgserpientenormal = loadImage ('data/bichos/serpiente_normal.png');
   imgserpienteroja = loadImage ('data/bichos/serpiente_roja.png');
-  
+  imgusanoAzul = loadImage('data/bichos/gusano_azul.png');
+  imgactorderecha = loadImage('data/actor/actor_derecha.png');
+  // nicolas
+
 }
 
 
