@@ -4,6 +4,9 @@ let imgabeja;
 let imgcentinela;
 let imggusanorojo;
 let imgusanoAzul;
+let imgactorderecha;
+
+// nicolas
 
 function preload() {
 
@@ -11,7 +14,10 @@ function preload() {
   imgcentinela = loadImage('data/bichos/centinela.png');
   imgabeja = loadImage('data/bichos/abeja.png');
   imggusanorojo = loadImage('data/bichos/gusano_rojo.png');
-  imgusanoAzul = loadImage ('data/bichos/gusano_azul.png');
+  imgusanoAzul = loadImage('data/bichos/gusano_azul.png');
+  imgactorderecha = loadImage('data/actor/actor_derecha.png');
+
+  // nicolas
 
 }
 
