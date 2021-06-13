@@ -2,13 +2,19 @@
 // bichos
 let imgabeja;
 let imgcentinela;
+let imgusanoAzul;
 
 function preload() {
 
   imgcentinela = loadImage('data/bichos/centinela.png');
   imgabeja = loadImage('data/bichos/abeja.png');
+  imgusanoAzul = loadImage ('data/bichos/gusano_azul.png');
 
 }
+
+
+
+
 
 function setup() {
   createCanvas(700, 550);
