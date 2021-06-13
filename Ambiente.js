@@ -23,8 +23,19 @@ class Ambiente extends Ent {
                 this.getIzq() < ent.getDer() &&
                 this.getY() > ent.getSup() &&
                 this.getY() < ent.getInf() || dist(this.getX(), this.getY(), ent.getX(), ent.getY()) < 20) && this.caminable === false) {
-            ent.vel = -ent.vel;
             // si el obstaculo no es caminable y es tocado por un ente, lo envia a la direccion opuesta
+            ent.vel = -ent.vel;
+            switch (ent.getDir()) {
+                case 1:
+                    ent.dir = 2;
+                    break;
+                    case 1:
+                        ent.dir = 2;
+                        break;
+
+                default:
+                    break;
+            }
         } else {
             return null;
         }

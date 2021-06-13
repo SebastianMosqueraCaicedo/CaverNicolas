@@ -74,6 +74,11 @@ class Actor extends Ent {
 
     }
 
+    // retorna la direccion actual    
+    getDir() {
+        return this.dir;
+    }
+
     // retorna las casillas consecuentes
 
     getCasillaSup() {
