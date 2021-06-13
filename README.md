@@ -1,4 +1,4 @@
 # CaverNicolas
-Proyecto final de Fundamientos para Programacion
+Proyecto final de Fundamentos para Programacion
 
-Conformado por Natalia, Nicolas Orozco y Sebastian Mosquera
+Conformado por Natalia Martinez, Nicolas Orozco y Sebastian Mosquera

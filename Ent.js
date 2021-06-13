@@ -8,8 +8,10 @@ class Ent {
         // posicion en cuadricula
         this.col = 0;
         this.fil = 0;
-        // un string estatando el nombre del ente
+        // un string estatando el tipo del ente
         this.tipo = "nada";
+        // un string estatando el nombre del ente
+        this.nombre = "nadie";
         // la anchura del ente / imagen
         this.ancho = 40;
         // la altura
@@ -18,8 +20,6 @@ class Ent {
         this.estado = 0;
         // el valor en puntos del ente
         this.valor = 0;
-        // determina si el ente ignora los proyectiles
-        this.disparable = false
 
     }
 
@@ -39,7 +39,7 @@ class Ent {
         textAlign(CENTER, TOP);
     }
 
-    // verifica si la entidad fue tocada por otra, y si es cierto, retorna el tipo de ente
+    // verifica si la entidad fue tocada por otra, y si es cierto, retorna el nombre de ente
 
     tocado(ent) {
 
@@ -58,7 +58,7 @@ class Ent {
             this.getIzq() < ent.getDer() &&
             this.getY() > ent.getSup() &&
             this.getY() < ent.getInf()) {
-            return ent.tipo;
+            return ent.nombre;
         } else {
             return null;
         }

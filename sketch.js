@@ -1,4 +1,5 @@
 // Imagenes
+
 // bichos
 let imgabeja;
 let imgcentinela;
@@ -16,11 +17,11 @@ let imgactorderecha;
 let imgactorizquierda;
 let imgactorfrente;
 let imgactorartras;
-
 let imgactorderechapistola;
 let imgactorizquierdapistola;
 let imgactorfrentepistola;
 let imgactorartraspistola;
+
 
 let imgactorderechalatigo;
 let imgactorizquierdalatigo;
@@ -127,12 +128,15 @@ function preload() {
   imgactorizquierda = loadImage('data/actor/actor_izquierda.png');
   imgactorfrente = loadImage('data/actor/actor_derecha.png');
   imgactorartras = loadImage('data/actor/actor_atras.png');
-
   imgactorderechapistola = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorizquierdapistola = loadImage('data/actor/actor_izquierda_pistola.png');
   imgactorfrentepistola = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorartraspistola = loadImage('data/actor/actor_atras_pistola.png');
-
+  imgactorartras  = loadImage('data/actor/actor_atras.png');
+  imgactorderechapistola = loadImage('data/actor/actor_derecha_pistola.png');
+  imgactorizquierdapistola = loadImage('data/actor/actor_izquierda_pistola.png');
+  imgactorfrentepistola = loadImage('data/actor/actor_derecha_pistola.png');
+  imgactorartraspistola  = loadImage('data/actor/actor_atras_pistola.png');
   imgactorderechalatigo = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorizquierdalatigo = loadImage('data/actor/actor_izquierda_pistola.png');
 
@@ -155,7 +159,6 @@ function preload() {
   imghumo1_1 = loadImage('data/humo/humo_f_1.png');
   imghumo1_2 = loadImage('data/humo/humo_f_2.png');
   imghumo1_3 = loadImage('data/humo/humo_f_3.png');
-
   imghumo2_1 = loadImage('data/humo/humo2_f_1.png');
   imghumo2_2 = loadImage('data/humo/humo2_f_1.png');
   imghumo2_3 = loadImage('data/humo/humo2_f_1.png');
@@ -169,8 +172,6 @@ function preload() {
   imgnicolasizquierdamano = loadImage('data/nicolas/nicolas_izquierda_mano.png');
   imagnicolasmuerte = loadImage('data/nicolas/nicolas_muerte.png');
   imagnicolasnormal = loadImage('data/nicolas/nicolas_normal.png');
-
-
 
   //objetos
   imgbarril = loadImage('data/objetos/barril.png');
@@ -187,6 +188,19 @@ function preload() {
   imgpuertaabierta = loadImage('data/objetos/puerta_abierta.png');
   imgpuertacerrada = loadImage('data/objetos/puerta_cerrada.png');
   imgsimioazul = loadImage('data/objetos/simio_azul.png');
+  imgcarro  = loadImage ('data/objetos/carro.png');
+  imgcorazon0vida = loadImage ('data/objetos/corazon_0vida.png');
+  imgcorazonmediavida = loadImage ('data/objetos/corazon_media_vida.png');
+  imgcorazontodavida = loadImage ('data/objetos/corazon_toda_vida.png');
+  imgcuevaabierta = loadImage ('data/objetos/cueva_abierta.png');
+  imgcuevacerrada = loadImage ('data/objetos/cueva_cerrada.png');
+  imginterfaz = loadImage ('data/objetos/Interfaz.png');
+  imglatigo = loadImage ('data/objetos/latigo.png');
+  imgpistola = loadImage ('data/objetos/pistola.png');
+  imgpocima = loadImage ('data/objetos/pocima.png');
+  imgpuertaabierta = loadImage ('data/objetos/puerta_abierta.png');
+  imgpuertacerrada = loadImage ('data/objetos/puerta_cerrada.png');
+  imgsimioazul = loadImage ('data/objetos/simio_azul.png');
 
   //pantallas
   imggameover = loadImage('data/pantallas/gameover.png');
@@ -199,15 +213,12 @@ function preload() {
   imgacidoarriba = loadImage('data/proyectiles/acido_arriba.png');
   imgacidoderecha = loadImage('data/proyectiles/acido_derecha.png');
   imgacidoizquierda = loadImage('data/proyectiles/acido_izquierda.png');
-  
   imgbalaabajo = loadImage('data/proyectiles/bala_abajo.png');
   imgbalaarriba = loadImage('data/proyectiles/bala_arriba.png');
   imgbaladerecha = loadImage('data/proyectiles/bala_derecha.png');
   imgbalaizquierda = loadImage('data/proyectiles/bala_izquierda.png');
-
   imglatigohorizontal = loadImage('data/proyectiles/latigo_horizontal.png');
   imglatigovertical = loadImage('data/proyectiles/latigo_vertical.png');
-
   imgroca = loadImage('data/proyectiles/roca.png');
 
   //recogibles
