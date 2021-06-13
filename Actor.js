@@ -23,7 +23,7 @@ class Actor extends Ent {
         // contador de fotogramas de invincibilidad
         this.invincibilidad = 0;
     }
-
+    
     // mueve el actor dependiendo de su velocidad y direccion
 
     mover() {
