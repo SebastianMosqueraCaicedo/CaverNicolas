@@ -9,12 +9,11 @@ class Abeja extends Actor {
         this.vel = 5;
         this.monedas = 1;
         this.valor = 10;
-
         this.ancho = 17;
         this.alto = 20;
     }
 
     draw() {
-
+        image(imgabeja, this.x, this.y, this.ancho, this.alto);
     }
 }
