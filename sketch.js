@@ -204,7 +204,7 @@ function preload() {
   //pantallas
   imggameover = loadImage('data/pantallas/gameover.png');
   imginicio = loadImage('data/pantallas/inicio.png');
-  imgistrucciones = loadImage('data/pantallas/insturcciones.png');
+  imgistrucciones = loadImage('data/pantallas/instrucciones.png');
   imgvictoria = loadImage('data/pantallas/victoria.png');
 
   //proyectiles
