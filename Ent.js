@@ -20,19 +20,27 @@ class Ent {
 
     }
 
+    // pinta dependiendo del estado
+
     draw() {
+
+        //switch estado 1 imagen x, 2 imagen y...
 
     }
 
+    // generalidades: los rectangulos y el texto siempre seran centrados
+
     parametros() {
-        //funcion con generalidades: los rectangulos y el texto siempre seran centrados
+
         rectMode(CENTER);
         textAlign(CENTER, TOP);
     }
 
+    // verifica si la entidad fue tocada por otra, y si es cierto, retorna el tipo de ente
+
     tocado(ent) {
 
-        // esta funcion verifica si la entidad fue tocada por otra, y si es cierto, retorna el tipo de ente
+
 
         if (this.getSup() > ent.getSup() &&
             this.getSup() < ent.getInf() &&
