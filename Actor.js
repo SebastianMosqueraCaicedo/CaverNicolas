@@ -28,6 +28,28 @@ class Actor extends Ent {
 
     }
 
+    // aplica daño general al jugador
+
+    tocado(ent) {
+
+        if ((this.getSup() > ent.getSup() &&
+                this.getSup() < ent.getInf() &&
+                this.getX() > ent.getIzq() &&
+                this.getX() < ent.getDer() || this.getInf() > ent.getSup() &&
+                this.getInf() < ent.getInf() &&
+                this.getX() > ent.getIzq() &&
+                this.getX() < ent.getDer() || this.getDer() > ent.getIzq() &&
+                this.getDer() < ent.getDer() &&
+                this.getY() > ent.getSup() &&
+                this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
+                this.getIzq() < ent.getDer() &&
+                this.getY() > ent.getSup() &&
+                this.getY() < ent.getInf()) && ent.tipo === "jugador") {
+            ent.vida = ent.vida - this.dano;
+        }
+
+    }
+
     // determina cual es la siguiente casilla dependiendo de la posicion y la direccion
 
     getCasillaSiguiente() {
