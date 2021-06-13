@@ -1,7 +1,13 @@
+// Imagenes
+// bichos
 let imgabeja;
+let imgcentinela;
 
 function preload() {
+
+  imgcentinela = loadImage('data/bichos/centinela.png');
   imgabeja = loadImage('data/bichos/abeja.png');
+
 }
 
 function setup() {
