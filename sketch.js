@@ -10,9 +10,20 @@ let imghormigaverde
 let imgmurcielago
 let imgserpientenormal
 let imgserpienteroja
-let imgactorderecha;
 
-// nicolas
+//Jonh
+let imgactorderecha;
+//fondos
+//humo
+
+
+//nicolas
+
+//objetos
+
+
+
+
 
 
 function preload() {
@@ -29,7 +40,13 @@ function preload() {
   imgserpienteroja = loadImage ('data/bichos/serpiente_roja.png');
   imgusanoAzul = loadImage('data/bichos/gusano_azul.png');
   imgactorderecha = loadImage('data/actor/actor_derecha.png');
-  // nicolas
+  // John
+  //fondos
+  //humo
+
+  //nicolas
+
+  //objetos
 
 }
 
