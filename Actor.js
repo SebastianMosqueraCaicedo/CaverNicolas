@@ -74,9 +74,9 @@ class Actor extends Ent {
 
     }
 
-    // determina cual es la siguiente casilla dependiendo de la posicion y la direccion
+    // retorna las casillas consecuentes
 
-    getCasillaSiguiente() {
+    getCasillaDerecha() {
 
     }
 
