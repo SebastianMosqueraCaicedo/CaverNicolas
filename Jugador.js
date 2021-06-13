@@ -15,6 +15,8 @@ class Jugador extends Actor {
         this.cantidadPocimas = 0;
         // cuenta la cantidad de Llaves
         this.cantidadLlaves = 0;
+        // cuenta la cantidad de Puntos
+        this.cantidadPuntaje = 0;
     }
 
     // devuelve la cantidad de monedas que tiene el jugador
@@ -46,5 +48,8 @@ class Jugador extends Actor {
     getLlaves() {
         return this.cantidadLlaves
     }
-
+    // devuelve el puntaje
+    getPuntaje() {
+        return this.cantidadPuntaje
+    }
 }

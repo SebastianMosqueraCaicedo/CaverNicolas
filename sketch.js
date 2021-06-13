@@ -151,7 +151,6 @@ function preload() {
   imgpantalla10 = loadImage('data/fondos/pantalla_10.png');
   imgpantalla11 = loadImage('data/fondos/pantalla_11.png');
   imgpantalla12 = loadImage('data/fondos/pantalla_12.png');
-  imgpantalla13 = loadImage('data/fondos/pantalla_13.png');
   imgpantalla14 = loadImage('data/fondos/pantalla_14.png');
   imgpantalla15 = loadImage('data/fondos/pantalla_15.png');
 
