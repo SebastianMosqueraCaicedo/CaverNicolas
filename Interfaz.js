@@ -27,6 +27,6 @@ if (this.estado === 1) {
         this.contaCarriles = jugador.getCarriles();
         this.contaLlaves = jugador.getLlaves();
         this.contaVida = jugador.getVida();
-        
+        this.puntaje = jugador.getPuntaje();
     }
 }
