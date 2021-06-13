@@ -1,6 +1,6 @@
 // un actor que se mueve hacia el jugador
 
-class Gusano extends Actor {
+class Hormiga extends Actor {
     constructor(x, y) {
         super(x, y);
         this.vida = 5;

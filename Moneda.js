@@ -4,7 +4,9 @@ class Moneda extends Recogible {
         super(x, y);
         this.cantidad = 1;
     }
-    getCantidad();
+    getCantidad() {
+        return this.cantidad;
+    }
 
 
 }

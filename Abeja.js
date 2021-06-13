@@ -12,12 +12,9 @@ class Abeja extends Actor {
 
         this.ancho = 17;
         this.alto = 20;
-        let abeja = loadImage('data/bichos/abeja.png');
     }
 
     draw() {
-        image(this.abeja, this.x, this.y, this.ancho, this.alto);
-
 
     }
 }
