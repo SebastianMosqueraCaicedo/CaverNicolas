@@ -20,8 +20,6 @@ class Ent {
         this.estado = 0;
         // el valor en puntos del ente
         this.valor = 0;
-        // determina si el ente ignora los proyectiles
-        this.disparable = false
 
     }
 
