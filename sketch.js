@@ -2,11 +2,14 @@
 // bichos
 let imgabeja;
 let imgcentinela;
+let imggusanorojo;
 
 function preload() {
 
+  // bichos
   imgcentinela = loadImage('data/bichos/centinela.png');
   imgabeja = loadImage('data/bichos/abeja.png');
+  imggusanorojo = loadImage('data/bichos/gusano_rojo.png');
 
 }
 
