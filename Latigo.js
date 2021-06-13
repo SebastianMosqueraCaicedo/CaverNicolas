@@ -3,5 +3,9 @@
 class Latigo extends Proyectil {
     constructor(x, y) {
         super(x, y);
+        this.vida = 1;
+        this.vidaTotal = 1;
+        this.dano = 2;
+        this.vel = 10;
     }
 }

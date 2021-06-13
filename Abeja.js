@@ -3,5 +3,11 @@
 class Abeja extends Actor {
     constructor(x, y) {
         super(x, y);
+        this.vida = 1;
+        this.vidaTotal = 1;
+        this.dano = 1;
+        this.vel = 5;
+        this.monedas = 1;
+        this.valor = 10;
     }
 }
