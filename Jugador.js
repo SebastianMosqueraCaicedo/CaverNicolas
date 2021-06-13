@@ -32,19 +32,19 @@ class Jugador extends Actor {
     // devuelve los carriles
 
     getCarriles() {
-
+        return this.cantidadCarriles
     }
 
     // devuelve las pocimas
 
     getPocimas() {
-
+        return this.cantidadPocimas
     }
 
     // devuelve las Llaves
 
     getLlaves() {
-
+        return this.cantidadLlaves
     }
 
 }
