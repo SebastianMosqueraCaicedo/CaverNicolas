@@ -4,7 +4,6 @@ class Ambiente extends Ent {
     constructor(x, y) {
         super(x, y);
         // determina si el obstaculo permite el movimiento
-        this.caminable = false;
     }
 
     tocado(ent) {
@@ -22,7 +21,7 @@ class Ambiente extends Ent {
                 this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
                 this.getIzq() < ent.getDer() &&
                 this.getY() > ent.getSup() &&
-                this.getY() < ent.getInf() || dist(this.getX(), this.getY(), ent.getX(), ent.getY()) < 20) && this.caminable === false) {
+                this.getY() < ent.getInf() || dist(this.getX(), this.getY(), ent.getX(), ent.getY()) < 20) && (ent.tipo === "caminador") || (ent.tipo === "jugador")) {
             // si el obstaculo no es caminable y es tocado por un ente, lo envia a la direccion opuesta
             ent.vel = -ent.vel;
             switch (ent.getDir()) {
