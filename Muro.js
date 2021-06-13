@@ -1,0 +1,1 @@
+// un ambiente que no deja pasar ningun ente

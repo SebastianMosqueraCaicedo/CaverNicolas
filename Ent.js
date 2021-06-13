@@ -1,0 +1,1 @@
+// la clase padre principal, contiene generalidades como la posicion, hitbox, tamaño, tipo, estado y valor ( Actor, Ambiente, Recogible, Pantalla)

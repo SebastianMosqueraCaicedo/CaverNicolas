@@ -1,0 +1,1 @@
+// un actor que se mueve hacia el jugador

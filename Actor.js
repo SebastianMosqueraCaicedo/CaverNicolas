@@ -1,0 +1,1 @@
+// clase padre de todos los entes movibles (abeja, acido, bala, carro, centinela, creeper, gusano, hormiga, jugador, latigo, murcielago, nicolas, proyectil)

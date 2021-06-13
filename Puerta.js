@@ -1,0 +1,1 @@
+// un ambiente que cambia el estado de la pantalla

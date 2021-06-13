@@ -1,0 +1,1 @@
+// contiene la informacion de donde van a ir los ambientes y la imagen de fondo, dependiendo del estado

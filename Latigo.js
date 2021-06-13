@@ -1,0 +1,1 @@
+// un proyectil usado por el jugador, hace daño en una zona

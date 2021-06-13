@@ -1,0 +1,1 @@
+// un actor que solo se mueve cuando el jugador lo toca y sigue los carriles

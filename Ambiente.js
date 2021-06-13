@@ -1,0 +1,1 @@
+// clase padre de los obstaculos / objetos del mapa (puerta, abismo, muro, barril, cartel, carril)

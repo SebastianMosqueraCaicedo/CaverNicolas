@@ -1,0 +1,1 @@
+// un ambiente que al ser tocado por el jugador muestra una caja de texto

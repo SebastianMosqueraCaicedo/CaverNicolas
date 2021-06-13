@@ -1,0 +1,1 @@
+// una clase padre que contiene a los entes que pueden ser coleccionados por el jugador

@@ -1,0 +1,1 @@
+//un actor de abeja, que puede volar por encima de los abismos y se mueve aleatoriamente

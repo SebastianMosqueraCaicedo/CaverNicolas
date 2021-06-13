@@ -1,0 +1,1 @@
+// un actor que dispara el proyectil acido dependiendo de la posicion del jugador
