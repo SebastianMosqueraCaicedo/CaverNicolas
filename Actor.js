@@ -16,8 +16,10 @@ class Actor extends Ent {
         this.monedas = 0;
         // determina cuantos proyectiles ha creado el actor
         this.proyectiles = [];
-        //  dice cuanta distacia ha recorrido el actor
+        // dice cuanta distacia ha recorrido el actor
         this.distancia = 0;
+        // determina cuanto daño hace el actor
+        this.dano = 0;
     }
 
     // mueve el actor dependiendo de su velocidad y direccion
