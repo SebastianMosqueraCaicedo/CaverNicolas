@@ -5,6 +5,9 @@ class Ent {
         // coordenadas
         this.x = x;
         this.y = y;
+        // posicion en cuadricula
+        this.col = 0;
+        this.fil = 0;
         // un string estatando el nombre del ente
         this.tipo = "nada";
         // la anchura del ente / imagen
@@ -97,6 +100,16 @@ class Ent {
 
     getInf() {
         return (this.y + (this.alto / 2));
+    }
+
+    // retorna posicion en cuadricula
+
+    getCol() {
+        return this.col;
+    }
+
+    getFil() {
+        return this.fil;
     }
 
 }
