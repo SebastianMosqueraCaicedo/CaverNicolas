@@ -2,12 +2,18 @@
 
 class Ent {
     constructor(x, y) {
+        // coordenadas
         this.x = x;
         this.y = y;
+        // un string estatando el nombre del ente
         this.tipo = "nada";
+        // la anchura del ente / imagen
         this.ancho = 40;
+        // la altura
         this.alto = 40;
+        // la variacion en la que se encuentra el ente: esta atacando? moviendose?
         this.estado = 0;
+        // el valor en puntos del ente
         this.valor = 0;
 
     }
@@ -17,11 +23,14 @@ class Ent {
     }
 
     parametros() {
+        //funcion con generalidades: los rectangulos y el texto siempre seran centrados
         rectMode(CENTER);
         textAlign(CENTER, TOP);
     }
 
     tocado(ent) {
+
+        // esta funcion verifica si la entidad fue tocada por otra, y si es cierto, retorna el tipo de ente
 
         if (this.getSup() > ent.getSup() &&
             this.getSup() < ent.getInf() &&
@@ -42,12 +51,16 @@ class Ent {
         }
     }
 
-    getEstado() {
-        return this.estado;
-    }
+    // le diria al ente en que mapa esta
 
     setMapa(pantalla) {
 
+    }
+
+    // retorna informacion basica del ente
+
+    getEstado() {
+        return this.estado;
     }
 
     getX() {
@@ -57,6 +70,8 @@ class Ent {
     getY() {
         return this.y;
     }
+
+    // retorna cuatro puntos exteriores del ente: izquierdo, derecho, superior e inferior
 
     getIzq() {
         return (this.x - (this.ancho / 2));
