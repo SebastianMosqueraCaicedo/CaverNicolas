@@ -20,15 +20,38 @@ class Actor extends Ent {
         this.distancia = 0;
         // determina cuanto daño hace el actor
         this.dano = 0;
+        // contador de fotogramas de invincibilidad
+        this.invincibilidad = 0;
     }
 
     // mueve el actor dependiendo de su velocidad y direccion
 
     mover() {
+        if (this.estado != 0) {
+            switch (this.dir) {
+                case 1:
+                    this.y -= this.vel;
+                    break;
 
+                case 2:
+                    this.y += this.vel;
+                    break;
+
+                case 3:
+                    this.x -= this.vel;
+                    break;
+
+                case 4:
+                    this.x += this.vel;
+                    break;
+
+                default:
+                    break;
+            }
+        }
     }
 
-    // aplica daño general al jugador
+    // aplica daño general de los actores al jugador. entre mas daño, mas fotogramas de invincibilidad le da al jugador
 
     tocado(ent) {
 
@@ -44,8 +67,9 @@ class Actor extends Ent {
                 this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
                 this.getIzq() < ent.getDer() &&
                 this.getY() > ent.getSup() &&
-                this.getY() < ent.getInf()) && ent.tipo === "jugador") {
-            ent.vida = ent.vida - this.dano;
+                this.getY() < ent.getInf()) && ent.tipo === "jugador" && ent.invincibilidad === 0) {
+            ent.vida -= this.dano;
+            ent.invincibilidad = this.dano * 30;
         }
 
     }
