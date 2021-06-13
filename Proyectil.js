@@ -9,8 +9,10 @@ class Proyectil extends Actor {
         this.accel = 1
 
     }
-    
-        mover() {
+
+    // reemplaza la velocidad por aceleracion en el movimiento
+
+    mover() {
         if (this.estado != 0) {
             switch (this.dir) {
                 case 1:
@@ -35,7 +37,9 @@ class Proyectil extends Actor {
         }
     }
 
-    acelerar(){
+    // la ecuacion de aceleracion
+
+    acelerar() {
         this.accel = this.vel - (this.vel / (this.distanciaTotal - (this.distancia - 1)));
     }
 }
