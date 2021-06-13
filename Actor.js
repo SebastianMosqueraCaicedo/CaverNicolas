@@ -81,12 +81,22 @@ class Actor extends Ent {
 
     // retorna las casillas consecuentes
 
-    getCasillaSup() {
-        return (this.col - 1);
+    //superior
+    getCasillaSupY() {
+        return (this.fil - 1);
     }
 
+    getCasillaSupX() {
+        return this.col;
+    }
+
+    //inferior
     getCasillaInf() {
-        return (this.col + 1);
+        return (this.fil + 1);
+    }
+
+    getCasillaSupX() {
+        return this.col;
     }
 
     getCasillaIzq() {

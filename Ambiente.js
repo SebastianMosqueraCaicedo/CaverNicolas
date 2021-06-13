@@ -29,9 +29,15 @@ class Ambiente extends Ent {
                 case 1:
                     ent.dir = 2;
                     break;
-                    case 1:
-                        ent.dir = 2;
-                        break;
+                case 2:
+                    ent.dir = 1;
+                    break;
+                case 3:
+                    ent.dir = 4;
+                    break;
+                case 4:
+                    ent.dir = 3;
+                    break;
 
                 default:
                     break;
