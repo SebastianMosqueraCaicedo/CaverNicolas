@@ -242,6 +242,7 @@ let pocima = new Array(1)
 let gusano = new Array(3);
 let muro = new Array(40);
 let abismo = new Array(2);
+let creeper = new Array(1)
 
 function setup() {
   pixelDensity(2.0);
@@ -253,29 +254,27 @@ function setup() {
   acido = new Bala(350, 80);
   centinela123 = new Centinela(350, 180);
   puerta123 = new Puerta(250, 250);
-  pocima123 = new Pocima(350, 180);
-  gusano123 = new Gusano(350, 180);
+
 
   //posiciones centinela
   centinela[0] = new Centinela(240, 350);
-  centinela[1] = new Centinela(442,210);
+  centinela[1] = new Centinela(450,220);
 
   //la pocima
-
-  pocima[0] = new Pocima(470,42);
-  
-
-  pocima[0] = new Pocima(1140, 460);
+  pocima[0] = new Pocima(470, 42);
 
 
   //gusanos
-  gusano[0] = new Gusano(860, 620);
-  gusano[1] = new Gusano(860, 50);
-  gusano[2] = new Gusano(1140, 580);
+  gusano[0] = new Gusano(200, 300);
+  gusano[1] = new Gusano(207,58);
+  gusano[2] = new Gusano(493, 346);
 
   //muros
 
 
+
+  //creeper
+  creeper[0] = new Creeper(328, 100);
 }
 
 function draw() {
@@ -301,23 +300,15 @@ function draw() {
   centinela123.draw();
   centinela123.dir = 2;
 
-  pocima123.draw();
-  pocima123.dir = 2;
-
-  gusano123.draw();
-  gusano123.dir = 2;
-
-  for (let i = 0; i < centinela.length; i++) {
     centinela[0].draw();
-
-  }
+    centinela[1].draw();
 
     pocima[0].draw();
 
-  
-
-  for (let i = 0; i < gusano.length; i++) {
     gusano[0].draw();
+    gusano[1].draw();
+    gusano[2].draw();
 
-  }
+    creeper[0].draw();
+  
 }
