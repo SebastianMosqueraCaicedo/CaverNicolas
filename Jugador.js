@@ -3,6 +3,9 @@
 class Jugador extends Actor {
     constructor(x, y) {
         super(x, y);
+        this.vida = 6;
+        this.vidaTotal = 6
+        this.vel = 4;
         // determina si puede usar la pistola
         // 0 no tiene, 1 no puede usarla, 2 puede usarla , 3 puede usarla y esta mejorada
         this.estadoPistola = 0;
@@ -25,16 +28,16 @@ class Jugador extends Actor {
         image(imgactorizquierda, this.x, this.y, this.ancho, this.alto);
         image(imgactorfrente, this.x, this.y, this.ancho, this.alto);
         image(imgactorartras, this.x, this.y, this.ancho, this.alto);
-        image(imgabejaimgactorderechapistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorderechapistola, this.x, this.y, this.ancho, this.alto);
         image(imgactorizquierdapistola, this.x, this.y, this.ancho, this.alto);
         image(imgactorartraspistola, this.x, this.y, this.ancho, this.alto);
 
         image(imgactorizquierdalatigo, this.x, this.y, this.ancho, this.alto);
         image(imgactorderechalatigo, this.x, this.y, this.ancho, this.alto);
-        
+
 
     }
-   
+
 
 
 
@@ -73,10 +76,10 @@ class Jugador extends Actor {
     getPuntaje() {
         return this.cantidadPuntaje
     }
-    getLatigo (){
+    getLatigo() {
         return this.estadoLatigo
     }
-    getPistola (){
+    getPistola() {
         return this.estadoPistola
     }
 }

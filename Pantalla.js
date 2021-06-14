@@ -70,10 +70,10 @@ class Pantalla extends Ent {
                 image(imgpantalla15, this.x, this.y, 400, 400)
                 break;
             case 20:
-                image(imggameover, this.x, this.y, 400, 400)
+                image(imggameover, this.x, this.y, 700, 550)
                 break;
             case 21:
-
+                image(imgvictoria, this.x, this.y, 700, 550)
                 break;
 
             default:
