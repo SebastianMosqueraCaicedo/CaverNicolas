@@ -62,7 +62,9 @@ class Interfaz extends Ent {
             }
             if (jugador.getLatigo() != 0) {
                 image(imglatigo, 104, 482, this.ancho, this.alto);
-                
+            }
+            if (jugador.getPistola() != 0) {
+                image(imgpistola, 40, 482, this.ancho, this.alto);
             }
         }
 
@@ -75,6 +77,5 @@ class Interfaz extends Ent {
         this.contaLlaves = jugador.getLlaves();
         this.contaVida = jugador.getVida();
         this.puntaje = jugador.getPuntaje();
-
     }
 }

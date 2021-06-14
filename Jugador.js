@@ -52,4 +52,10 @@ class Jugador extends Actor {
     getPuntaje() {
         return this.cantidadPuntaje
     }
+    getLatigo (){
+        return this.estadoLatigo
+    }
+    getPistola (){
+        return this.estadoPistola
+    }
 }
