@@ -5,7 +5,7 @@ class Ent {
         // coordenadas
         this.x = x;
         this.y = y;
-        // posicion en cuadricula
+        // posicion de entidad en cuadricula
         this.col = 0;
         this.fil = 0;
         // un string estatando el tipo del ente
@@ -36,7 +36,7 @@ class Ent {
     parametros() {
 
         rectMode(CENTER);
-        textAlign(CENTER, TOP);
+
     }
 
     // verifica si la entidad fue tocada por otra, y si es cierto, retorna el nombre de ente

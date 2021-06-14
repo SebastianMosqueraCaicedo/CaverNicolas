@@ -147,7 +147,7 @@ function preload() {
   imgactorizquierdalatigo = loadImage('data/actor/actor_izquierda_pistola.png');
 
   //fondos
-  imgfondotest = loadImage('data/fondos/Fondo_Test.png');
+  imgfondotest = loadImage('data/fondos/fondo_test.png');
   imgpantalla4 = loadImage('data/fondos/pantalla_4.png');
   imgpantalla5 = loadImage('data/fondos/pantalla_5.png');
   imgpantalla6 = loadImage('data/fondos/pantalla_6.png');
@@ -237,23 +237,81 @@ function preload() {
   imgpocimar = loadImage('data/recogibles/pocima_recogible.png');
 }
 
+function Terrain() {
+  // Como construimos nuestro mapa
+
+  let mapa = [];
+  let muro = [];
+  return {
+    init: function () {
+      // Crear Arreglo de arreglos
+      for (let index = 0; index < 10; index++) {
+        mapa.push(new Array(10));
+      }
+      for (let i = 0; i < 10; i++) {
+        muro.push(new Array(10));
+
+      }
+      // asignar valores iniciales
+      for (let fil = 0; fil < 10; fil++) {
+        for (let col = 0; col < 10; col++) {
+          mapa[fil][col] = 0;
+        }
+      }
+      // seleccionamos algunos [fila][col] --> y, x
+      mapa[2][0] = 1;
+      mapa[7][2] = 1;
+      mapa[0][3] = 1;
+      mapa[0][4] = 1;
+      mapa[4][5] = 1;
+      mapa[2][8] = 1;
+      mapa[3][8] = 1;
+      mapa[4][8] = 1;
+      console.log(mapa)
+    },
+    show: function () {
+      // pintamos basados en los valores de la matriz
+      for (let fil = 0; fil < 10; fil++) {
+        for (let col = 0; col < 10; col++) {
+          if (mapa[fil][col] === 0) {
+
+            noFill();
+          } else if (mapa[fil][col] === 1) {
+            muro[fil][col] = new Abeja(170 + (40 * fil), 20 + (40 * col));
+            muro[fil][col].draw();
+          }
+
+        }
+      }
+      //image(bckimage,0,0);
+    },
+    getValueLocation: function (nfil, ncol) {
+      return mapa[nfil][ncol];
+    }
+  }
+}
+
 function setup() {
   pixelDensity(2.0);
   createCanvas(700, 550);
   ejemplo = new Abeja(200, 200);
-  interfaz = new Interfaz(200, 200);
+  pantalla = new Pantalla(150, 0);
+  interfaz = new Interfaz(200, 0);
   jugador = new Jugador(200, 200);
-  cartel = new Cartel (200,200);
+  mapa = new Terrain();
+  mapa.init();
 }
 
 function draw() {
+  console.log(".");
   background(220);
   ejemplo.draw();
+  interfaz.estado = 1;
   interfaz.draw(jugador);
   interfaz.contar(jugador);
+  pantalla.draw();
+  pantalla.estado = 4;
   jugador.draw();
-  cartel.draw()
-  jugador.monedas = 0;
-  interfaz.estado = 1;
-  
+  mapa.show();
+
 }
