@@ -22,31 +22,137 @@ class Jugador extends Actor {
         this.cantidadPuntaje = 0;
         // determina si y que esta disparando
         this.disparando = 0;
+        // recarga de pistola y latigo
+        this.contadorRecargaL = 20;
+        this.contadorRecargaP = 40;
         this.tipo = "jugador";
         this.nombre = "jonh";
-        this.contadorRecarga = 40;
+    }
+
+    // no le permite al jugador "espamear" los ataques e incita a que los intercale
+
+    disparar() {
+        if (this.contadorRecargaL < 20) {
+            this.contadorRecargaL++
+        }
+        if (this.contadorRecargaP < 40) {
+            this.contadorRecargaP++
+        }
+        if (((this.estado >= 6 && this.estado <= 8) &&
+                this.contadorRecargaP === 40) && this.contadorRecargaL > 15) {
+            this.disparando = 1;
+            this.contadorRecargaP = 0;
+        }
+        if (((this.estado === 9 || this.estado === 10) &&
+                this.contadorRecargaL === 20 && this.contadorRecargaP > 10)) {
+            this.disparando = 2;
+            this.contadorRecargaP = 0;
+        }
     }
 
     draw() {
+        if (this.vida > 0) {
+            switch (this.dir) {
+                case 1:
+                    this.estado = 2;
+                    if (this.disparando > 0) {
+                        this.estado = 6;
+                    }
+                    break;
 
-        image(imgactorderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorfrente, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorartras, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorderechapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorizquierdapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorartraspistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                case 2:
+                    this.estado = 1;
+                    if (this.disparando === 1) {
+                        this.estado = 5;
+                    }
+                    break;
 
-        image(imgactorizquierdalatigo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorderechalatigo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                case 3:
+                    this.estado = 3;
+                    if (this.disparando === 1) {
+                        this.estado = 7;
+                    }
+                    if (this.disparando === 2) {
+                        this.estado = 9;
+                    }
+                    break;
+
+                case 4:
+                    this.estado = 4;
+                    if (this.disparando > 0) {
+                        this.estado = 8;
+                    }
+                    if (this.disparando === 2) {
+                        this.estado = 10;
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+            switch (this.estado) {
+
+                case 1:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorfrente, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 2:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorartras, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 3:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 4:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 5:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorfrentepistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 6:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorartraspistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 7:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorizquierdapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 8:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorderechapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 9:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorizquierdalatigo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 10:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorderechalatigo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
 
 
+                default:
+                    this.ancho = 24.51;
+                    this.alto = 40;
+                    image(imgactorfrente, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+            }
+        }
     }
-
-
-
-
-
 
     // devuelve la cantidad de monedas que tiene el jugador
 

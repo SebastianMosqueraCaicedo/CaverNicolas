@@ -132,7 +132,7 @@ function preload() {
   // John
   imgactorderecha = loadImage('data/actor/actor_derecha.png');
   imgactorizquierda = loadImage('data/actor/actor_izquierda.png');
-  imgactorfrente = loadImage('data/actor/actor_derecha.png');
+  imgactorfrente = loadImage('data/actor/actor_frente.png');
   imgactorartras = loadImage('data/actor/actor_atras.png');
   imgactorderechapistola = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorizquierdapistola = loadImage('data/actor/actor_izquierda_pistola.png');
@@ -237,68 +237,6 @@ function preload() {
   imgpocimar = loadImage('data/recogibles/pocima_recogible.png');
 }
 
-function Terrain() {
-  // Como construimos nuestro mapa
-
-  let mapa = [];
-  let puertas = [];
-  let llaves = [];
-  return {
-    init: function () {
-      // Crear Arreglo de arreglos
-      for (let index = 0; index < 10000; index++) {
-        mapa.push(new Array(10));
-        puertas.push(new Array(1000));
-        llaves.push(new Array(10));
-      }
-
-      // asignar valores iniciales
-      for (let fil = 0; fil < 10; fil++) {
-        for (let col = 0; col < 10; col++) {
-          puertas[fil][col] = 0;
-        }
-      }
-
-      mapa[7][2] = "puerta";
-      mapa[7][1] = "llave";
-      mapa[3][7] = "puerta";
-
-      console.log(mapa)
-    },
-    show: function () {
-      // pintamos basados en los valores de la matriz
-      for (let fil = 0; fil < 10; fil++) {
-        for (let col = 0; col < 10; col++) {
-          switch (mapa[fil][col]) {
-            case 0:
-              noFill();
-              break;
-            case "puerta":
-              puertas[fil][col] = new Puerta(170 + (40 * fil), 20 + (40 * col));
-              puertas[fil][col].draw();
-              break;
-            case "llave":
-              llaves[fil][col] = new Llave(170 + (40 * fil), 20 + (40 * col));
-              llaves[fil][col].recoger(jugador);
-              if (llaves[fil][col].getRecogido() === false) {
-                llaves[fil][col].draw();
-              }
-              break;
-            default:
-              break;
-          }
-
-
-        }
-      }
-      //image(bckimage,0,0);
-    },
-    getValueLocation: function (nfil, ncol) {
-      return mapa[nfil][ncol];
-    }
-  }
-}
-
 function setup() {
   pixelDensity(2.0);
   createCanvas(700, 550);
@@ -306,15 +244,13 @@ function setup() {
   pantalla = new Pantalla(150, 0);
   interfaz = new Interfaz(200, 0);
   jugador = new Jugador(350, 300);
-  acido = new Acido(350, 80);
+  acido = new Bala(350, 80);
   acido2 = new Acido(350, 180);
   puerta = new Puerta(250, 250);
-  mapa = new Terrain();
-  mapa.init();
 }
 
 function draw() {
-  console.log(mouseX,mouseY);
+  console.log(mouseX, mouseY);
   background(220);
   ejemplo.draw();
   interfaz.estado = 1;
@@ -324,20 +260,17 @@ function draw() {
   pantalla.estado = 4;
   jugador.draw();
   jugador.mover();
-  mapa.show();
-  if (pantalla.cambiarPantalla(jugador, puerta)) {
-    mapa.init();
-  }
-    acido.draw();
-    acido.dir = 2;
-    acido.estado = 1;
-    acido.mover();
-    acido.tocado(jugador);
 
-    acido2.draw();
-    acido2.dir = 2;
-    acido2.mover();
-    acido2.tocado(jugador);
+  acido.draw();
+  acido.dir = 2;
+  acido.estado = 1;
+  acido.mover();
+  acido.tocado(jugador);
+
+  acido2.draw();
+  acido2.dir = 2;
+  acido2.mover();
+  acido2.tocado(jugador);
 
 
 }

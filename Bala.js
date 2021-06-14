@@ -15,24 +15,25 @@ class Bala extends Proyectil {
     }
 
     draw() {
-        switch (this.dir) {
-            case 1:
-                image(imgbalaarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
-            case 2:
-                image(imgbalaabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
-            case 3:
-                image(imgbaladerecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
-            case 4:
-                image(imgbalaizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
+        if (this.vida > 0) {
+            switch (this.dir) {
+                case 1:
+                    image(imgbalaarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 2:
+                    image(imgbalaabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 3:
+                    image(imgbaladerecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 4:
+                    image(imgbalaizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
-
     }
 
 }

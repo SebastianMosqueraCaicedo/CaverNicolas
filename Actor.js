@@ -102,6 +102,8 @@ class Actor extends Ent {
 
     }
 
+    // animacion basica de muerte
+
     muerte() {
         if (this.vida <= 0) {
             this.contadorMuerte++;
