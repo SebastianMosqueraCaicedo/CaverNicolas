@@ -15,7 +15,7 @@ class Proyectil extends Actor {
     mover() {
 
 
-this.acelerar();
+        this.acelerar();
 
         if (this.vida != 0) {
             switch (this.dir) {
@@ -107,5 +107,11 @@ this.acelerar();
             this.distancia++; // 2,720
             this.accel = this.vel - (this.vel * (1 / (this.distanciaTotal / (this.distancia))));
         }
+    }
+
+    // coloca la direccion del proyectil dependiendo de la del actor
+
+    setDir(antonio) {
+        this.dir = antonio.getDir;
     }
 }
