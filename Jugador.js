@@ -23,7 +23,6 @@ class Jugador extends Actor {
     }
 
     draw() {
-        console.log(this.monedas);
         image(imgactorderecha, this.x, this.y, this.ancho, this.alto);
         image(imgactorizquierda, this.x, this.y, this.ancho, this.alto);
         image(imgactorfrente, this.x, this.y, this.ancho, this.alto);
