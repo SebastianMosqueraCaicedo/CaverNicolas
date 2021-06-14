@@ -6,7 +6,7 @@ class Interfaz extends Ent {
         this.contaPociones = 0;
         this.contaCarriles = 0;
         this.contaLlaves = 0;
-        this.puntaje = 0;
+        this.contaPuntaje = 0;
         this.contaVida = 6;
     }
 
@@ -14,11 +14,18 @@ class Interfaz extends Ent {
 
 
     draw() {
+
         parametros();
         if (this.estado === 1) {
             image(imginterfaz, this.x, this.y, this.ancho, this.alto);
             image(imglatigo, this.x, this.y, this.ancho, this.alto);
             image(imgpistola, this.x, this.y, this.ancho, this.alto);
+            text(this.contaPociones, 643, 412);
+            text(this.contaLlaves, 643, 453);
+            text(this.contaCarriles, 643, 495);
+            text(this.contaPuntajes, 24, 22); 
+
+
             switch (this.contaVida) {
                 case 6:
                     image(imgcorazontodavida, 24, 416, this.ancho, this.alto);
