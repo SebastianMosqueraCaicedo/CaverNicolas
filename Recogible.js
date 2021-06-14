@@ -5,6 +5,7 @@ class Recogible extends Ent {
         super(x, y);
         // determina si fue recogido
         this.recogido = false;
+        this.vida = 1;
     }
 
     // cambia el estado de recogido

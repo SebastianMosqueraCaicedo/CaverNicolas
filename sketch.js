@@ -238,8 +238,10 @@ function preload() {
 }
 let acidos = [];
 let centinela = new Array(2);
-let pocima = new Array (1)
-let gusano = new Array (3);
+let pocima = new Array(1)
+let gusano = new Array(3);
+let muro = new Array(40);
+let abismo = new Array(2);
 
 function setup() {
   pixelDensity(2.0);
@@ -251,20 +253,27 @@ function setup() {
   acido = new Bala(350, 80);
   centinela123 = new Centinela(350, 180);
   puerta123 = new Puerta(250, 250);
-  pocima123 = new Pocima (350, 180);
-  gusano123 = new Gusano (350, 180);
+  pocima123 = new Pocima(350, 180);
+  gusano123 = new Gusano(350, 180);
 
   //posiciones centinela
   centinela[0] = new Centinela(240, 350);
   centinela[1] = new Centinela(442,210);
 
   //la pocima
+
   pocima[0] = new Pocima(470,42);
   
+
+  pocima[0] = new Pocima(1140, 460);
+
+
   //gusanos
-  gusano [0] = new Gusano(860, 620);
-  gusano [1] = new Gusano(860, 50);
-  gusano [2] = new Gusano(1140, 580 );
+  gusano[0] = new Gusano(860, 620);
+  gusano[1] = new Gusano(860, 50);
+  gusano[2] = new Gusano(1140, 580);
+
+  //muros
 
 
 }
@@ -293,10 +302,10 @@ function draw() {
   centinela123.dir = 2;
 
   pocima123.draw();
-  pocima123.dir =2;
+  pocima123.dir = 2;
 
   gusano123.draw();
-  gusano123.dir =2;
+  gusano123.dir = 2;
 
   for (let i = 0; i < centinela.length; i++) {
     centinela[0].draw();

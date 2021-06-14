@@ -24,18 +24,24 @@ class Ambiente extends Ent {
                 this.getY() < ent.getInf() || dist(this.getX(), this.getY(), ent.getX(), ent.getY()) < 20) && (ent.tipo === "caminador") || (ent.tipo === "jugador")) {
             // si el obstaculo no es caminable y es tocado por un ente, lo envia a la direccion opuesta
             ent.vel = -ent.vel;
+            // lo devuelve la distancia y direccion necesaria para volver a su posicion anterior
+
             switch (ent.getDir()) {
                 case 1:
                     ent.dir = 2;
+                    ent.distancia = abs(ent.getY() - ent.getPastY())
                     break;
                 case 2:
                     ent.dir = 1;
+                    ent.distancia = abs(ent.getY() - ent.getPastY())
                     break;
                 case 3:
                     ent.dir = 4;
+                    ent.distancia = abs(ent.getX() - ent.getPastX())
                     break;
                 case 4:
                     ent.dir = 3;
+                    ent.distancia = abs(ent.getX() - ent.getPastX())
                     break;
 
                 default:
