@@ -6,6 +6,8 @@ class Jugador extends Actor {
         this.vida = 6;
         this.vidaTotal = 6
         this.vel = 4;
+        this.tipo = "jugador";
+        this.nombre = "john";
         // determina si puede usar la pistola
         // 0 no tiene, 1 no puede usarla, 2 puede usarla , 3 puede usarla y esta mejorada
         this.estadoPistola = 0;
