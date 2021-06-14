@@ -52,7 +52,6 @@ class Jugador extends Actor {
 
     draw() {
         if (this.vida > 0) {
-            this.disparar();
             switch (this.dir) {
                 case 1:
                     this.estado = 2;
@@ -105,42 +104,42 @@ class Jugador extends Actor {
                     image(imgactorartras, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 3:
-                    this.ancho = 24.51;
+                    this.ancho = 20.51;
                     this.alto = 40;
                     image(imgactorizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 4:
-                    this.ancho = 24.51;
+                    this.ancho = 20.51;
                     this.alto = 40;
                     image(imgactorderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 5:
-                    this.ancho = 24.51;
+                    this.ancho = 23.05;
                     this.alto = 40;
                     image(imgactorfrentepistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 6:
-                    this.ancho = 24.51;
+                    this.ancho = 24.52;
                     this.alto = 40;
                     image(imgactorartraspistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 7:
-                    this.ancho = 24.51;
+                    this.ancho = 28.86;
                     this.alto = 40;
                     image(imgactorizquierdapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
-                case 8:
-                    this.ancho = 24.51;
+                case 8: 
+                    this.ancho = 28.80;
                     this.alto = 40;
                     image(imgactorderechapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 9:
-                    this.ancho = 24.51;
+                    this.ancho = 22.56;
                     this.alto = 40;
                     image(imgactorizquierdalatigo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
                 case 10:
-                    this.ancho = 24.51;
+                    this.ancho = 22.56;
                     this.alto = 40;
                     image(imgactorderechalatigo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
