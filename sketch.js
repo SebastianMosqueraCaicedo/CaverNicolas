@@ -251,4 +251,5 @@ function draw() {
   interfaz.draw(jugador);
   jugador.monedas = 200;
   interfaz.estado = 1;
+  
 }
