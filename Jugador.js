@@ -52,6 +52,7 @@ class Jugador extends Actor {
 
     draw() {
         if (this.vida > 0) {
+            this.disparar();
             switch (this.dir) {
                 case 1:
                     this.estado = 2;
