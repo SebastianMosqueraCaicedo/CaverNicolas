@@ -14,10 +14,13 @@ class Interfaz extends Ent {
 
     draw(jugador) {
         if (this.estado === 1) {
+            //traer imagen
             image(imginterfaz, 0, 0, 700, 550);
+            //la fuente
             textFont(fuente);
             fill(255);
             textSize(30);
+            //texto con los contadores
             text(this.contaPociones, 643, 435);
             text(this.contaLlaves, 643, 475);
             text(this.contaCarriles, 643, 518);
@@ -27,6 +30,7 @@ class Interfaz extends Ent {
             textSize(20);
             text('x', 579, 30);
             image(imgmonedar, 555, 10, 20, 20);
+           //casos de vida de 6 al 0 (6toda la vida, 0ninguna vida)
             switch (this.contaVida) {
                 case 6:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
@@ -66,6 +70,7 @@ class Interfaz extends Ent {
                 default:
                     break;
             }
+            //cargar las armas
             if (jugador.getLatigo() != 0) {
                 image(imglatigo, 95, 472, 36, 36);
             }
@@ -76,7 +81,7 @@ class Interfaz extends Ent {
         }
 
     }
-
+    //contadores de la clase jugador
     contar(jugador) {
         this.contaMonedas = jugador.getMonedas();
         this.contaPociones = jugador.getPocimas();
