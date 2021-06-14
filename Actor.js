@@ -48,9 +48,11 @@ class Actor extends Ent {
 
     mover() {
         if (this.estado != 0 || this.vida > 0) {
-            if (this.distancia === 0) {
+            this.movimiento();
+            if (dist(this.x, this.y, this.getPastX, this.getPastY) === 40) {
                 this.moviendose = false;
             }
+
             if (this.moviendose === true && this.distancia > 0) {
                 this.distancia -= this.vel;
                 switch (this.dir) {
@@ -77,6 +79,16 @@ class Actor extends Ent {
         }
         if (this.vida <= 0) {
             this.muerte();
+        }
+    }
+
+    // determina COMO se va a mover
+    // el movimiento base es aleatorio
+
+    movimiento() {
+        this.dir = random(1, 4);
+        if (frameCount % random(60, 180) && this.moviendose === false) {
+            this.moviendose = true;
         }
     }
 

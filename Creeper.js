@@ -19,7 +19,12 @@ class Creeper extends Actor {
         if (this.vida > 0) {
             image(imgcreeper, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
         }
+        if (this.vida <= 0) {
+            this.muerte();
+        }
     }
+
+    //autodestruccion
 
     tocado(ent) {
 
@@ -44,6 +49,8 @@ class Creeper extends Actor {
             }
         }
     }
+
+    // muerte especial de creeper
 
     muerte() {
         if (this.vida <= 0) {

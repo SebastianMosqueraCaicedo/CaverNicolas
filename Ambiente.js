@@ -25,7 +25,6 @@ class Ambiente extends Ent {
             // si el obstaculo no es caminable y es tocado por un ente, lo envia a la direccion opuesta
             ent.vel = -ent.vel;
             // lo devuelve la distancia y direccion necesaria para volver a su posicion anterior
-
             switch (ent.getDir()) {
                 case 1:
                     ent.dir = 2;
