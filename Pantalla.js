@@ -3,16 +3,31 @@
 class Pantalla extends Ent {
     constructor(x, y) {
         super(x, y);
+        //contara fotogramas
+        this.contador = 0;
     }
 
     draw() {
+        if (this.contador > 14) {
+            contador--;
+        }
+        if (this.contador != 0) {
+            contador++;
+        }
         super.parametros();
         switch (this.estado) {
-            case 0:
 
+            case -1:
+                //mapa de testeado
+                image(imgfondotest, this.x, this.y, 400, 400)
+                break;
+            case 0:
+                //menu de inicio
+                image(imginicio, this.x, this.y, 700, 550)
                 break;
             case 1:
-
+                // menu istrucciones
+                image(imgistrucciones, this.x, this.y, 700, 550)
                 break;
             case 2:
 
@@ -65,7 +80,17 @@ class Pantalla extends Ent {
         }
     }
 
-    cambiarPantalla(puerta) {
-
+    cambiarPantalla(puerta, jugador) {
+        if (jugador.getFil() === puerta.getFil() && jugador.getCol() === puerta.getCol()) {
+            this.contador = 1;
+            if (this.contador != 0) {
+                // transicion basica
+                fill(0, 100 - ((100 / 15) * (15 / this.contador)))
+            }
+            if (this.contador === 0) {
+                // cambia el estado dependiendo de la puerta
+                this.estado = puerta.identificador;
+            }
+        }
     }
 }
