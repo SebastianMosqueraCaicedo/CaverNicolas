@@ -232,16 +232,17 @@ function preload() {
   imgpocimar = loadImage('data/recogibles/pocima_recogible.png');
 }
 
-
-
-
-
 function setup() {
+  pixelDensity(2.0);
   createCanvas(700, 550);
   ejemplo = new Abeja(200, 200);
+  interfaz = new Interfaz(200,200);
+  jugador = new Jugador(200,200);
 }
 
 function draw() {
   background(220);
   ejemplo.draw();
+  interfaz.draw(jugador);
+  interfaz.estado = 1;
 }
