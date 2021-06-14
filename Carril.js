@@ -4,4 +4,12 @@ class Carril extends Ambiente {
     constructor(x, y) {
         super(x, y);
     }
+
+
+    draw() {
+        image(imgcarril, this.x, this.y, this.ancho, this.alto);
+    }
+
+
+
 }

@@ -10,4 +10,9 @@ class Centinela extends Actor {
         this.monedas = 2;
         this.valor = 15;
     }
-}1
+
+    draw() {
+        image(imgcentinela, this.x, this.y, this.ancho, this.alto);
+    }
+
+}

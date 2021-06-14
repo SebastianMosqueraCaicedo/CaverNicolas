@@ -19,6 +19,26 @@ class Jugador extends Actor {
         this.cantidadPuntaje = 0;
     }
 
+    draw() {
+        image(imgactorderecha, this.x, this.y, this.ancho, this.alto);
+        image(imgactorizquierda, this.x, this.y, this.ancho, this.alto);
+        image(imgactorfrente, this.x, this.y, this.ancho, this.alto);
+        image(imgactorartras, this.x, this.y, this.ancho, this.alto);
+        image(imgabejaimgactorderechapistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorizquierdapistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorartraspistola, this.x, this.y, this.ancho, this.alto);
+
+        image(imgactorizquierdalatigo, this.x, this.y, this.ancho, this.alto);
+        image(imgactorderechalatigo, this.x, this.y, this.ancho, this.alto);
+        
+
+    }
+   
+
+
+
+
+
     // devuelve la cantidad de monedas que tiene el jugador
 
     getMonedas() {

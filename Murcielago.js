@@ -10,4 +10,9 @@ class Murcielago extends Actor {
         this.monedas = 1;
         this.valor = 15;
     }
+
+    draw() {
+        image(imgmurcielago, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

@@ -8,4 +8,11 @@ class Latigo extends Proyectil {
         this.dano = 2;
         this.vel = 10;
     }
+
+
+    draw() {
+
+    image(imglatigo, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

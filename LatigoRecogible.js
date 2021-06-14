@@ -4,4 +4,10 @@ class LatigoRecogible extends Recogible {
         super(x, y);
     }
 
+
+    draw() {
+        image(imglatigor, this.x, this.y, this.ancho, this.alto);
+    }
+
+
 }

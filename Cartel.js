@@ -4,4 +4,6 @@ class Cartel extends Ambiente {
     constructor(x, y) {
         super(x, y);
     }
+    
+
 }
