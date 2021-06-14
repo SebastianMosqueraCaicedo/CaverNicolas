@@ -4,6 +4,8 @@ class Cofre extends Recogible {
         super(x, y);
         this.anchos = 40;
         this.alto = 30.3;
+        this.tipo = "recogible";
+        this.nombre = "cofre";
     }
 
     draw() {

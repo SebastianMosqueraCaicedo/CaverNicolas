@@ -5,6 +5,8 @@ class Barril extends Ambiente {
         super(x, y);
         this.ancho = 38;
         this.alto = 40;
+        this.tipo = "estatico";
+        this.nombre = "barril";
     }
 
     draw() {

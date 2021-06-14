@@ -12,6 +12,8 @@ class Gusano extends Actor {
         this.valor = 20;
         this.ancho = 10.3;
         this.alto = 20;
+        this.tipo = "caminador";
+        this.nombre = "gusano";
     }
 
     draw() {

@@ -7,6 +7,8 @@ class Latigo extends Proyectil {
         this.vidaTotal = 1;
         this.dano = 2;
         this.vel = 10;
+        this.tipo = "arma";
+        this.nombre = "latigo";
     }
 
 

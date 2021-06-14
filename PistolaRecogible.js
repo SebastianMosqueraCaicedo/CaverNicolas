@@ -4,6 +4,8 @@ class PistolaRecogible extends Recogible {
         super(x, y);
         this.ancho = 42;
         this.alto = 23;
+        this.tipo = "recogible";
+        this.nombre = "pistolaR";
     }
 
     draw() {

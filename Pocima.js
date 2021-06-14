@@ -5,6 +5,8 @@ class Pocima extends Recogible {
         super(x, y);
         this.ancho = 40;
         this.alto = 40;
+        this.tipo = "recogible";
+        this.nombre = "pocima";
     }
 
     draw() {

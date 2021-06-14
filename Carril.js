@@ -3,6 +3,8 @@
 class Carril extends Ambiente {
     constructor(x, y) {
         super(x, y);
+        this.tipo = "estatico";
+        this.nombre = "carril";
     }
 
 

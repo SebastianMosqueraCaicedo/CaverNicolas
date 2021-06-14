@@ -11,6 +11,8 @@ class Abeja extends Actor {
         this.valor = 10;
         this.ancho = 17;
         this.alto = 20;
+        this.tipo = "volador";
+        this.nombre = "abeja";
     }
 
     draw() {

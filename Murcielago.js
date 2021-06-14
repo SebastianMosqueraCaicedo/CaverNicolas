@@ -12,6 +12,7 @@ class Murcielago extends Actor {
         this.ancho = 20;
         this.alto = 7.78;
         this.tipo = "volador";
+        this.nombre = "murcilago";
         
     }
 

@@ -4,6 +4,8 @@ class LatigoRecogible extends Recogible {
         super(x, y);
         this.ancho = 36;
         this.alto = 36;
+        this.tipo = "recogible";
+        this.nombre = "larigoR";
     }
 
 

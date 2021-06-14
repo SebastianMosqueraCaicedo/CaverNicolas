@@ -6,6 +6,7 @@ class Puerta extends Ambiente {
         this.identificador = identificador;
         this.ancho = 29;
         this.alto = 40;
+        this.tipo = "puerta";
 
     }
 

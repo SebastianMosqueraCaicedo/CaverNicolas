@@ -5,6 +5,8 @@ class Carro extends Actor {
         super(x, y);
         this.ancho = 25;
         this.alto = 25;
+        this.tipo = "jugador";
+        this.nombre = "carro";
     }
 
     draw() {

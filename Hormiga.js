@@ -11,6 +11,8 @@ class Hormiga extends Actor {
         this.valor = 15;
         this.ancho = 22.5;
         this.alto = 30;
+        this.tipo = "caminador";
+        this.nombre = "hormiga";
     }
 
     draw() {

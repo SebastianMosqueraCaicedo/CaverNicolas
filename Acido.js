@@ -9,6 +9,8 @@ class Acido extends Proyectil {
         this.vel = 2;
         this.ancho = 10; 
         this.alto = 10;
+        this.tipo = "proyectil";
+        this.nombre = "acido";
     }
 
     draw() {

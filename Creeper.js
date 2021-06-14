@@ -10,6 +10,8 @@ class Creeper extends Actor {
         this.valor = 25;
         this.ancho =  16.67;
         this.alto = 20;
+        this.tipo = "caminador";
+        this.nombre = "creeper";
 
     }
 

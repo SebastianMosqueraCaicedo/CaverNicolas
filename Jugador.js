@@ -20,6 +20,8 @@ class Jugador extends Actor {
         this.cantidadLlaves = 0;
         // cuenta la cantidad de Puntos
         this.cantidadPuntaje = 0;
+        this.tipo = "jugador";
+        this.nombre = "jonh";
     }
 
     draw() {

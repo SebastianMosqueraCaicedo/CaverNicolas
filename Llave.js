@@ -5,6 +5,7 @@ class Llave extends Recogible {
         super(x, y);
         this.ancho = 38;
         this.alto = 38;
+        this.tipo = "recogible";
         this.nombre = "llave";
     }
 

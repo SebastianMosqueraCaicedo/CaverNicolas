@@ -5,6 +5,8 @@ class Nicolas extends Actor {
         super(x, y);
         this.ancho = 24.21;
         this.alto = 40;
+        this.tipo = "jefe";
+        this.nombre = "nicolas";
         
     }
 

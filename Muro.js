@@ -5,6 +5,8 @@ class Muro extends Ambiente {
         super(x, y);
         this.ancho = 40;
         this.alto = 40;
+        this.tipo = "ambiente";
+        this.nombre = "muro";
     }
     draw() {
 

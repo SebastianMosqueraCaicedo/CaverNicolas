@@ -5,6 +5,8 @@ class Moneda extends Recogible {
         this.cantidad = 1;
         this.ancho = 15;
         this.alto = 13.5;
+        this.tipo = "recogible";
+        this.nombre = "moneda";
     }
     getCantidad() {
         return this.cantidad;

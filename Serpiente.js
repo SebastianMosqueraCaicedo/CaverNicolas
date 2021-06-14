@@ -11,7 +11,8 @@ class Serpiente extends Actor {
         this.valor = 5;
         this.ancho = 40;
         this.alto = 8.52;
-        this.tipo = "caminador"
+        this.tipo = "caminador";
+        this.nombre = "serpiente";
     }
 
     draw() {

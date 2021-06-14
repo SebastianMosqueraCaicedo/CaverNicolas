@@ -3,5 +3,7 @@
 class Abismo extends Ambiente {
     constructor(x, y) {
         super(x, y);
+        this.tipo = "ambiente";
+        this.nombre = "abismo";
     }
 }
