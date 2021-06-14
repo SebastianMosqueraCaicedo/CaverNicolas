@@ -249,5 +249,6 @@ function draw() {
   background(220);
   ejemplo.draw();
   interfaz.draw(jugador);
+  jugador.monedas = 200;
   interfaz.estado = 1;
 }
