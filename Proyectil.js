@@ -8,6 +8,8 @@ class Proyectil extends Actor {
         // reemplaza a velocidad y cambia dependiendo de esta y la distancia recorrida
         this.accel = 1
         this.dir = 2;
+        // distancia total recorrida
+        this.distancia = 0;
     }
 
     // reemplaza la velocidad por aceleracion en el movimiento

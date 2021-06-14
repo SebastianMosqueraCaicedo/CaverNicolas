@@ -14,8 +14,8 @@ class Actor extends Ent {
         this.vidaTotal = 1;
         // determina cuantas monedas tiene el actor
         this.monedas = 0;
-        // dice cuanta distacia ha recorrido el actor
-        this.distancia = 0;
+        // dice cuanta recorrera el actor
+        this.distancia = 40;
         // determina cuanto daño hace el actor
         this.dano = 0;
         // contador de fotogramas de invincibilidad
@@ -42,11 +42,14 @@ class Actor extends Ent {
     }
 
     // mueve el actor dependiendo de su velocidad y direccion
+    // distancia solo lo deja mover cuando termina de desplazarse
 
     mover() {
         if (this.estado != 0 || this.vida > 0) {
             switch (this.dir) {
                 case 1:
+                    if (this.distancia)
+                        distancia++
                     this.y -= this.vel;
                     break;
 
@@ -94,8 +97,8 @@ class Actor extends Ent {
                 this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
                 this.getIzq() < ent.getDer() &&
                 this.getY() > ent.getSup() &&
-                this.getY() < ent.getInf()) && ent.tipo === "jugador" && 
-                ent.invincibilidadFrame() === 0) {
+                this.getY() < ent.getInf()) && ent.tipo === "jugador" &&
+            ent.invincibilidadFrame() === 0) {
             ent.vida -= this.dano;
             ent.invincibilidad = this.dano * 30;
         }

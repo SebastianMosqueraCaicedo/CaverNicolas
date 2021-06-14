@@ -245,7 +245,7 @@ function setup() {
   interfaz = new Interfaz(200, 0);
   jugador = new Jugador(350, 300);
   acido = new Bala(350, 80);
-  acido2 = new Acido(350, 180);
+  centinela = new Centinela(350, 180);
   puerta = new Puerta(250, 250);
 }
 
@@ -267,10 +267,8 @@ function draw() {
   acido.mover();
   acido.tocado(jugador);
 
-  acido2.draw();
-  acido2.dir = 2;
-  acido2.mover();
-  acido2.tocado(jugador);
+  centinela.draw();
+  centinela.dir = 2;
 
 
 }
