@@ -36,40 +36,41 @@ class Pantalla extends Ent {
 
                 break;
             case 4:
-
+                //menu de inicio
+                image(imgpantalla4, this.x, this.y, 400, 400)
                 break;
             case 5:
-
+                image(imgpantalla5, this.x, this.y, 400, 400)
                 break;
             case 6:
-
+                image(imgpantalla6, this.x, this.y, 400, 400)
                 break;
             case 7:
-
+                image(imgpantalla7, this.x, this.y, 400, 400)
                 break;
             case 8:
-
+                image(imgpantalla8, this.x, this.y, 400, 400)
                 break;
             case 9:
-
+                image(imgpantalla9, this.x, this.y, 400, 400)
                 break;
             case 10:
-
+                image(imgpantalla10, this.x, this.y, 400, 400)
                 break;
             case 11:
-
+                image(imgpantalla11, this.x, this.y, 400, 400)
                 break;
             case 12:
-
+                image(imgpantalla12, this.x, this.y, 400, 400)
                 break;
             case 14:
-
+                image(imgpantalla14, this.x, this.y, 400, 400)
                 break;
             case 15:
-
+                image(imgpantalla15, this.x, this.y, 400, 400)
                 break;
             case 20:
-
+                image(imggameover, this.x, this.y, 400, 400)
                 break;
             case 21:
 
