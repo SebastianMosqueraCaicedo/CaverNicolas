@@ -255,11 +255,11 @@ function setup() {
   gusano123 = new Gusano (350, 180);
 
   //posiciones centinela
-  centinela[0] = new Centinela(980, 700);
-  centinela[1] = new Centinela(1020, 700);
+  centinela[0] = new Centinela(240, 350);
+  centinela[1] = new Centinela(442,210);
 
   //la pocima
-  pocima[0] = new Pocima(1140,460);
+  pocima[0] = new Pocima(470,42);
   
   //gusanos
   gusano [0] = new Gusano(860, 620);
@@ -271,7 +271,7 @@ function setup() {
 
 function draw() {
   //posicion mouse
-  //console.log(mouseX, mouseY);
+  console.log(mouseX, mouseY);
 
   background(220);
   ejemplo.draw();
@@ -279,7 +279,7 @@ function draw() {
   interfaz.draw(jugador);
   interfaz.contar(jugador);
   pantalla.draw();
-  pantalla.estado = 4;
+  pantalla.estado = 5;
   jugador.draw();
   jugador.mover();
 
@@ -303,10 +303,9 @@ function draw() {
 
   }
 
-  for (let i = 0; i < pocima.length; i++) {
     pocima[0].draw();
 
-  }
+  
 
   for (let i = 0; i < gusano.length; i++) {
     gusano[0].draw();
