@@ -16,6 +16,8 @@ class Abeja extends Actor {
     }
 
     draw() {
-        image(imgabeja, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        if (this.vida > 0) {
+            image(imgabeja, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        }
     }
 }

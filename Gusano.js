@@ -17,8 +17,9 @@ class Gusano extends Actor {
     }
 
     draw() {
-        image(imggusanorojo,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgusanoAzul,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        if (this.vida > 0) {
+            image(imggusanorojo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+            image(imgusanoAzul,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        }
     }
-
 }

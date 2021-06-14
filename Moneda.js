@@ -13,7 +13,9 @@ class Moneda extends Recogible {
     }
 
     draw() {
-        image(imgmonedar, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        if (this.vida > 0) {
+            image(imgmonedar, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        }
     }
 
 

@@ -10,7 +10,9 @@ class Llave extends Recogible {
     }
 
     draw() {
-        image(imgllaver, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        if (this.vida > 0) {
+            image(imgllaver, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        }
     }
 
 }

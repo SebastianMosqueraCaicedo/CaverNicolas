@@ -16,9 +16,10 @@ class Hormiga extends Actor {
     }
 
     draw() {
-        image(imghormiganormal, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imghormigaverde, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        
+        if (this.vida > 0) {
+            image(imghormiganormal, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+            image(imghormigaverde,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        }
     }
 
 }
