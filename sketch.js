@@ -1,3 +1,6 @@
+//fuente
+let fuente;
+
 // Imagenes
 
 // bichos
@@ -111,6 +114,8 @@ let imgpistolar;
 let imgpocimar;
 
 function preload() {
+  //fuente
+  fuente = loadFont('data/fuente/PixelEmulator-xq08.ttf')
   // bichos
   imgcentinela = loadImage('data/bichos/centinela.png');
   imgabeja = loadImage('data/bichos/abeja.png');
@@ -133,11 +138,11 @@ function preload() {
   imgactorizquierdapistola = loadImage('data/actor/actor_izquierda_pistola.png');
   imgactorfrentepistola = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorartraspistola = loadImage('data/actor/actor_atras_pistola.png');
-  imgactorartras  = loadImage('data/actor/actor_atras.png');
+  imgactorartras = loadImage('data/actor/actor_atras.png');
   imgactorderechapistola = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorizquierdapistola = loadImage('data/actor/actor_izquierda_pistola.png');
   imgactorfrentepistola = loadImage('data/actor/actor_derecha_pistola.png');
-  imgactorartraspistola  = loadImage('data/actor/actor_atras_pistola.png');
+  imgactorartraspistola = loadImage('data/actor/actor_atras_pistola.png');
   imgactorderechalatigo = loadImage('data/actor/actor_derecha_pistola.png');
   imgactorizquierdalatigo = loadImage('data/actor/actor_izquierda_pistola.png');
 
@@ -188,20 +193,20 @@ function preload() {
   imgpuertaabierta = loadImage('data/objetos/puerta_abierta.png');
   imgpuertacerrada = loadImage('data/objetos/puerta_cerrada.png');
   imgsimioazul = loadImage('data/objetos/simio_azul.png');
-  imgcarro  = loadImage ('data/objetos/carro.png');
-  imgcorazon0vida = loadImage ('data/objetos/corazon_0vida.png');
-  imgcorazonmediavida = loadImage ('data/objetos/corazon_media_vida.png');
-  imgcorazontodavida = loadImage ('data/objetos/corazon_toda_vida.png');
-  imgcuevaabierta = loadImage ('data/objetos/cueva_abierta.png');
-  imgcuevacerrada = loadImage ('data/objetos/cueva_cerrada.png');
-  imginterfaz = loadImage ('data/objetos/Interfaz.png');
-  imglatigo = loadImage ('data/objetos/latigo.png');
-  imgpistola = loadImage ('data/objetos/pistola.png');
-  imgpocima = loadImage ('data/objetos/pocima.png');
-  imgpuertaabierta = loadImage ('data/objetos/puerta_abierta.png');
-  imgpuertacerrada = loadImage ('data/objetos/puerta_cerrada.png');
-  imgsimioazul = loadImage ('data/objetos/simio_azul.png');
-  imgcarril =  loadImage ('data/objetos/carril.png');
+  imgcarro = loadImage('data/objetos/carro.png');
+  imgcorazon0vida = loadImage('data/objetos/corazon_0vida.png');
+  imgcorazonmediavida = loadImage('data/objetos/corazon_media_vida.png');
+  imgcorazontodavida = loadImage('data/objetos/corazon_toda_vida.png');
+  imgcuevaabierta = loadImage('data/objetos/cueva_abierta.png');
+  imgcuevacerrada = loadImage('data/objetos/cueva_cerrada.png');
+  imginterfaz = loadImage('data/objetos/Interfaz.png');
+  imglatigo = loadImage('data/objetos/latigo.png');
+  imgpistola = loadImage('data/objetos/pistola.png');
+  imgpocima = loadImage('data/objetos/pocima.png');
+  imgpuertaabierta = loadImage('data/objetos/puerta_abierta.png');
+  imgpuertacerrada = loadImage('data/objetos/puerta_cerrada.png');
+  imgsimioazul = loadImage('data/objetos/simio_azul.png');
+  imgcarril = loadImage('data/objetos/carril.png');
 
   //pantallas
   imggameover = loadImage('data/pantallas/gameover.png');
@@ -236,8 +241,8 @@ function setup() {
   pixelDensity(2.0);
   createCanvas(700, 550);
   ejemplo = new Abeja(200, 200);
-  interfaz = new Interfaz(200,200);
-  jugador = new Jugador(200,200);
+  interfaz = new Interfaz(200, 200);
+  jugador = new Jugador(200, 200);
 }
 
 function draw() {

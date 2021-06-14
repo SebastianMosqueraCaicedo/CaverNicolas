@@ -13,17 +13,20 @@ class Interfaz extends Ent {
 
 
     draw(jugador) {
-        super.parametros();
         if (this.estado === 1) {
-            image(imginterfaz, 0, 0,700, 550);
-           
-            fill (255);
+            image(imginterfaz, 0, 0, 700, 550);
+            textFont(fuente);
+            fill(255);
             textSize(30);
-            text(this.contaPociones, 643, 412);
-            text(this.contaLlaves, 643, 453);
-            text(this.contaCarriles, 643, 495);
-            fill (0);
-            text(this.contaPuntaje, 24, 22); 
+            text(this.contaPociones, 643, 435);
+            text(this.contaLlaves, 643, 475);
+            text(this.contaCarriles, 643, 518);
+            fill(0);
+            text(this.contaPuntaje, 12, 30);
+            text(this.contaMonedas, 599, 30);
+            textSize(20);
+            text('x', 579, 30);
+            image(imgmonedar, 555, 10, 20, 20);
             switch (this.contaVida) {
                 case 6:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
@@ -69,7 +72,7 @@ class Interfaz extends Ent {
             if (jugador.getPistola() != 0) {
                 image(imgpistola, 30, 483, 42, 23);
             }
-           
+
         }
 
     }
