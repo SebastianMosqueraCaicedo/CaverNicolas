@@ -1,7 +1,6 @@
 class Interfaz extends Ent {
     constructor(x, y) {
         super(x, y);
-
         this.contaMonedas = 0;
         this.contaPociones = 0;
         this.contaCarriles = 0;
@@ -13,19 +12,15 @@ class Interfaz extends Ent {
 
 
 
-    draw() {
-
+    draw(jugador) {
         parametros();
         if (this.estado === 1) {
             image(imginterfaz, this.x, this.y, this.ancho, this.alto);
-            image(imglatigo, this.x, this.y, this.ancho, this.alto);
             image(imgpistola, this.x, this.y, this.ancho, this.alto);
             text(this.contaPociones, 643, 412);
             text(this.contaLlaves, 643, 453);
             text(this.contaCarriles, 643, 495);
             text(this.contaPuntajes, 24, 22); 
-
-
             switch (this.contaVida) {
                 case 6:
                     image(imgcorazontodavida, 24, 416, this.ancho, this.alto);
@@ -65,6 +60,10 @@ class Interfaz extends Ent {
                 default:
                     break;
             }
+            if (jugador.getLatigo() != 0) {
+                image(imglatigo, 104, 482, this.ancho, this.alto);
+                
+            }
         }
 
     }
@@ -76,5 +75,6 @@ class Interfaz extends Ent {
         this.contaLlaves = jugador.getLlaves();
         this.contaVida = jugador.getVida();
         this.puntaje = jugador.getPuntaje();
+
     }
 }
