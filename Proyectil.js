@@ -37,6 +37,38 @@ class Proyectil extends Actor {
         }
     }
 
+    // override del tocado original
+
+    tocado(ent) {
+
+        if (this.getSup() > ent.getSup() &&
+            this.getSup() < ent.getInf() &&
+            this.getX() > ent.getIzq() &&
+            this.getX() < ent.getDer() || this.getInf() > ent.getSup() &&
+            this.getInf() < ent.getInf() &&
+            this.getX() > ent.getIzq() &&
+            this.getX() < ent.getDer() || this.getDer() > ent.getIzq() &&
+            this.getDer() < ent.getDer() &&
+            this.getY() > ent.getSup() &&
+            this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
+            this.getIzq() < ent.getDer() &&
+            this.getY() > ent.getSup() &&
+            this.getY() < ent.getInf()) {
+            if ((this.nombre === "roca" || this.nombre === "acido") && ent.tipo === "jugador") {
+                ent.vida -= this.dano;
+                ent.invincibilidad = this.dano * 30;
+                this.vida = 0;
+            }
+            if (this.nombre === "bala" && ent.tipo === "jugador") {
+                ent.vida -= this.dano;
+                ent.invincibilidad = this.dano * 30;
+                this.vida = 0;
+            }
+        } else {
+            return null;
+        }
+    }
+
     // la ecuacion de aceleracion
 
     acelerar() {
