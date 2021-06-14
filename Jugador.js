@@ -52,6 +52,7 @@ class Jugador extends Actor {
 
     draw() {
         if (this.vida > 0) {
+            this.disparar();
             switch (this.dir) {
                 case 1:
                     this.estado = 2;
@@ -128,7 +129,7 @@ class Jugador extends Actor {
                     this.alto = 40;
                     image(imgactorizquierdapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
                     break;
-                case 8: 
+                case 8:
                     this.ancho = 28.80;
                     this.alto = 40;
                     image(imgactorderechapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
