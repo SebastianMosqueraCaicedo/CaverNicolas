@@ -15,7 +15,7 @@ class Actor extends Ent {
         // determina cuantas monedas tiene el actor
         this.monedas = 0;
         // dice cuanta recorrera el actor
-        this.distancia = 40;
+        this.distancia = 0;
         // determina cuanto daño hace el actor
         this.dano = 0;
         // contador de fotogramas de invincibilidad
@@ -28,6 +28,8 @@ class Actor extends Ent {
         this.contadorRecarga = 180;
         // muestra la animacion de muerte
         this.contadorMuerte = 0;
+        // determina si se esta moviendo
+        this.moviendose = false;
 
     }
 
@@ -46,27 +48,29 @@ class Actor extends Ent {
 
     mover() {
         if (this.estado != 0 || this.vida > 0) {
-            switch (this.dir) {
-                case 1:
-                    if (this.distancia)
-                        distancia++
-                    this.y -= this.vel;
-                    break;
 
-                case 2:
-                    this.y += this.vel;
-                    break;
+            if (this.moviendose === true && this.distancia > 0) {
+                this.distancia -= this.vel;
+                switch (this.dir) {
+                    case 1:
+                        this.y -= this.vel;
+                        break;
 
-                case 3:
-                    this.x -= this.vel;
-                    break;
+                    case 2:
+                        this.y += this.vel;
+                        break;
 
-                case 4:
-                    this.x += this.vel;
-                    break;
+                    case 3:
+                        this.x -= this.vel;
+                        break;
 
-                default:
-                    break;
+                    case 4:
+                        this.x += this.vel;
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
         if (this.vida <= 0) {

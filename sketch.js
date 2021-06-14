@@ -236,6 +236,8 @@ function preload() {
   imgpistolar = loadImage('data/recogibles/pistola_recogible.png');
   imgpocimar = loadImage('data/recogibles/pocima_recogible.png');
 }
+let acidos = [];
+let centinela = new Array(18);
 
 function setup() {
   pixelDensity(2.0);
@@ -245,12 +247,17 @@ function setup() {
   interfaz = new Interfaz(200, 0);
   jugador = new Jugador(350, 300);
   acido = new Bala(350, 80);
-  centinela = new Centinela(350, 180);
+  centinela123 = new Centinela(350, 180);
   puerta = new Puerta(250, 250);
+
+  //posiciones centinela
+  centinela[0] = new Centinela(350, 150);
 }
 
 function draw() {
-  console.log(mouseX, mouseY);
+  //posicion mouse
+  //console.log(mouseX, mouseY);
+
   background(220);
   ejemplo.draw();
   interfaz.estado = 1;
@@ -267,8 +274,11 @@ function draw() {
   acido.mover();
   acido.tocado(jugador);
 
-  centinela.draw();
-  centinela.dir = 2;
+  centinela123.draw();
+  centinela123.dir = 2;
 
+  for (let i = 0; i < centinela.length; i++) {
+    centinela[0].draw();
 
+  }
 }
