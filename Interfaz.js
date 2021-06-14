@@ -31,7 +31,13 @@ class Interfaz extends Ent {
             text('x', 579, 30);
             image(imgmonedar, 555, 10, 20, 20);
            //casos de vida de 6 al 0 (6toda la vida, 0ninguna vida)
-            switch (this.contaVida) {
+           if (this.contaVida < 0) {
+            image(imgcorazon0vida, 12, 410, this.ancho, this.alto);
+            image(imgcorazon0vida, 59, 410, this.ancho, this.alto);
+            image(imgcorazon0vida, 105, 410, this.ancho, this.alto);
+               
+           }
+           switch (this.contaVida) {
                 case 6:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
                     image(imgcorazontodavida, 59, 410, this.ancho, this.alto);
