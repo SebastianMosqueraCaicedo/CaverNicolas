@@ -1,10 +1,11 @@
 // un recogible que aumenta el contador de llaves
 
-class Llave extends Recogible{
-    constructor(x,y){
-        super(x,y);
+class Llave extends Recogible {
+    constructor(x, y) {
+        super(x, y);
         this.ancho = 38;
-        this.alto = 12.29;    
+        this.alto = 38;
+        this.nombre = "llave";
     }
 
     draw() {

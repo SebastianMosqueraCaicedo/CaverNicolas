@@ -241,45 +241,53 @@ function Terrain() {
   // Como construimos nuestro mapa
 
   let mapa = [];
-  let muro = [];
+  let puertas = [];
+  let llaves = [];
   return {
     init: function () {
       // Crear Arreglo de arreglos
-      for (let index = 0; index < 10; index++) {
+      for (let index = 0; index < 10000; index++) {
         mapa.push(new Array(10));
+        puertas.push(new Array(1000));
+        llaves.push(new Array(10));
       }
-      for (let i = 0; i < 10; i++) {
-        muro.push(new Array(10));
 
-      }
       // asignar valores iniciales
       for (let fil = 0; fil < 10; fil++) {
         for (let col = 0; col < 10; col++) {
-          mapa[fil][col] = 0;
+          puertas[fil][col] = 0;
         }
       }
-      // seleccionamos algunos [fila][col] --> y, x
-      mapa[2][0] = 1;
-      mapa[7][2] = 1;
-      mapa[0][3] = 1;
-      mapa[0][4] = 1;
-      mapa[4][5] = 1;
-      mapa[2][8] = 1;
-      mapa[3][8] = 1;
-      mapa[4][8] = 1;
+
+      mapa[7][2] = "puerta";
+      mapa[7][1] = "llave";
+      mapa[3][7] = "puerta";
+
       console.log(mapa)
     },
     show: function () {
       // pintamos basados en los valores de la matriz
       for (let fil = 0; fil < 10; fil++) {
         for (let col = 0; col < 10; col++) {
-          if (mapa[fil][col] === 0) {
-
-            noFill();
-          } else if (mapa[fil][col] === 1) {
-            muro[fil][col] = new Abeja(170 + (40 * fil), 20 + (40 * col));
-            muro[fil][col].draw();
+          switch (mapa[fil][col]) {
+            case 0:
+              noFill();
+              break;
+            case "puerta":
+              puertas[fil][col] = new Puerta(170 + (40 * fil), 20 + (40 * col));
+              puertas[fil][col].draw();
+              break;
+            case "llave":
+              llaves[fil][col] = new Llave(170 + (40 * fil), 20 + (40 * col));
+              llaves[fil][col].recoger(jugador);
+              if (llaves[fil][col].getRecogido() === false) {
+                llaves[fil][col].draw();
+              }
+              break;
+            default:
+              break;
           }
+
 
         }
       }
@@ -297,7 +305,8 @@ function setup() {
   ejemplo = new Abeja(200, 200);
   pantalla = new Pantalla(150, 0);
   interfaz = new Interfaz(200, 0);
-  jugador = new Jugador(200, 200);
+  jugador = new Jugador(424, 60);
+  puerta = new Puerta(250, 250);
   mapa = new Terrain();
   mapa.init();
 }
@@ -313,5 +322,8 @@ function draw() {
   pantalla.estado = 4;
   jugador.draw();
   mapa.show();
+  if (pantalla.cambiarPantalla(jugador, puerta)) {
+    mapa.init();
+  }
 
 }

@@ -34,4 +34,8 @@ class Recogible extends Ent {
             }
         }
     }
+
+    getRecogido() {
+        return this.recogido;
+    }
 }

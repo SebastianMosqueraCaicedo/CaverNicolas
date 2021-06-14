@@ -9,12 +9,11 @@ class Pantalla extends Ent {
     }
 
     draw() {
-        console.log(this.estado);
         if (this.contador > 14) {
-            contador--;
+            this.contador--;
         }
         if (this.contador != 0) {
-            contador++;
+            this.contador++;
         }
         switch (this.estado) {
 
