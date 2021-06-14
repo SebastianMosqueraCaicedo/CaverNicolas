@@ -16,10 +16,10 @@ class Latigo extends Proyectil {
     draw() {
         switch (this.dir) {
             case 1:
-                image(imglatigovertical, this.x - (this.alto / 2), this.y - (this.ancho / 2), this.ancho, this.alto);
+                image(imglatigovertical, this.x - (this.alto / 2), this.y - (this.ancho / 2), this.alto, this.ancho);
                 break;
             case 2:
-                image(imglatigovertical, this.x - (this.alto / 2), this.y - (this.ancho / 2), this.ancho, this.alto);
+                image(imglatigovertical, this.x - (this.alto / 2), this.y - (this.ancho / 2), this.alto, this.ancho);
                 break;
             case 3:
                 image(imglatigohorizontal, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
@@ -31,8 +31,32 @@ class Latigo extends Proyectil {
             default:
                 break;
         }
-        image(imglatigohorizontal, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imglatigovertical, this.x - (this.alto / 2), this.y - (this.ancho / 2), this.ancho, this.alto);
+
+
     }
 
+    mover() {
+        switch (this.dir) {
+            case 1:
+                this.y -= this.vel;
+                break;
+
+            case 2:
+                this.y += this.vel;
+
+                break;
+
+            case 3:
+                this.x -= this.vel;
+                break;
+
+            case 4:
+                this.x += this.vel;
+                break;
+
+            default:
+                break;
+
+        }
+    }
 }

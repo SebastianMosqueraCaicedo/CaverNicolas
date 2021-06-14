@@ -9,7 +9,7 @@ class Bala extends Proyectil {
         this.vel = 5;
         this.ancho = 5;
         this.alto = 5;
-        this.distanciaTotal = 200;
+        this.distanciaTotal = 60;
         this.tipo = "proyectil";
         this.nombre = "bala";
     }

@@ -13,53 +13,39 @@ class Proyectil extends Actor {
     // reemplaza la velocidad por aceleracion en el movimiento
 
     mover() {
-        if (this.nombre != "latigo") {
-            if (this.estado != 0) {
-                switch (this.dir) {
-                    case 1:
-                        this.y -= this.accel;
-                        break;
 
-                    case 2:
-                        this.y += this.accel;
-                        break;
+        console.log(this.distancia);
+this.acelerar();
 
-                    case 3:
-                        this.x -= this.accel;
-                        break;
+        if (this.vida != 0) {
+            switch (this.dir) {
+                case 1:
+                    this.y -= this.accel;
+                    break;
 
-                    case 4:
-                        this.x += this.accel;
-                        break;
+                case 2:
+                    this.y += this.accel;
+                    break;
 
-                    default:
-                        break;
-                }
-            } else {
-                if (this.estado != 0) {
-                    switch (this.dir) {
-                        case 1:
-                            this.y -= this.vel;
-                            break;
+                case 3:
+                    this.x -= this.accel;
+                    break;
 
-                        case 2:
-                            this.y += this.vel;
-                            break;
+                case 4:
+                    this.x += this.accel;
+                    break;
 
-                        case 3:
-                            this.x -= this.vel;
-                            break;
-
-                        case 4:
-                            this.x += this.vel;
-                            break;
-
-                        default:
-                            break;
-
-                    }
-                }
+                default:
+                    break;
             }
+            if (this.accel === 0 || this.distanciaTotal <= this.distancia) {
+                this.vida = 0;
+                this.estado = 0;
+                this.dano = 0;
+            }
+
+
+
         }
     }
 
@@ -83,8 +69,9 @@ class Proyectil extends Actor {
             if ((this.nombre === "roca" || this.nombre === "acido") &&
                 ent.tipo === "jugador") {
                 ent.vida -= this.dano;
-                ent.invincibilidad = this.dano * 30;
+                ent.invincibilidad = this.dano * 35;
                 this.vida = 0;
+                this.dano = 0;
             }
             if ((this.nombre === "bala" || this.nombre === "latigo") &&
                 (ent.tipo === "volador" || ent.tipo === "caminador")) {
@@ -92,6 +79,7 @@ class Proyectil extends Actor {
                 ent.invincibilidad = this.dano * 10;
                 if (this.nombre === "bala") {
                     this.vida = 0;
+                    this.dano = 0;
                 }
 
             }
@@ -100,6 +88,7 @@ class Proyectil extends Actor {
                 ent.vida -= (this.dano / 2);
                 ent.invincibilidad = this.dano * 20;
                 this.vida = 0;
+                this.dano = 0;
             }
             if (this.nombre === "latigo" &&
                 (ent.tipo === "jefe")) {
@@ -114,6 +103,9 @@ class Proyectil extends Actor {
     // la ecuacion de aceleracion
 
     acelerar() {
-        this.accel = this.vel - (this.vel / (this.distanciaTotal - (this.distancia - 1)));
+        if (this.distancia < this.distanciaTotal && this.vida > 0) {
+            this.distancia++; // 2,720
+            this.accel = this.vel - (this.vel * (1 / (this.distanciaTotal / (this.distancia))));
+        }
     }
 }

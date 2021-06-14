@@ -26,19 +26,8 @@ class Actor extends Ent {
         this.alto = 40;
         // determina cuanto se tarda recargando
         this.contadorRecarga = 180;
-
-    }
-
-
-    draw() {
-        image(imgactorderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorderechapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorizquierdapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorfrentepistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorfrente, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorartras, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgactorartraspistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        // muestra la animacion de muerte
+        this.contadorMuerte = 0;
 
     }
 
@@ -55,7 +44,7 @@ class Actor extends Ent {
     // mueve el actor dependiendo de su velocidad y direccion
 
     mover() {
-        if (this.estado != 0) {
+        if (this.estado != 0 || this.vida > 0) {
             switch (this.dir) {
                 case 1:
                     this.y -= this.vel;
@@ -76,6 +65,9 @@ class Actor extends Ent {
                 default:
                     break;
             }
+        }
+        if (this.vida <= 0) {
+            this.muerte();
         }
     }
 
@@ -107,6 +99,24 @@ class Actor extends Ent {
             ent.invincibilidad = this.dano * 30;
         }
 
+    }
+
+    muerte() {
+        if (this.vida === 0) {
+            this.contadorMuerte++;
+            if (this.contadorMuerte > 0 &&
+                this.contadorMuerte < 19) {
+                image(imghumo1_1, this.x - (this.ancho / 2), this.y - (this.alto / 2), 40, 40)
+            }
+            if (this.contadorMuerte >= 19 &&
+                this.contadorMuerte < 39) {
+                image(imghumo1_2, this.x - (this.ancho / 2), this.y - (this.alto / 2), 40, 40)
+            }
+            if (this.contadorMuerte > 39 &&
+                this.contadorMuerte < 60) {
+                image(imghumo1_3, this.x - (this.ancho / 2), this.y - (this.alto / 2), 40, 40)
+            }
+        }
     }
 
     // retorna la direccion actual    

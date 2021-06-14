@@ -5,34 +5,35 @@ class Acido extends Proyectil {
         super(x, y);
         this.vida = 1;
         this.vidaTotal = 1;
-        this.dano = 2;
+        this.dano = 3;
         this.vel = 2;
         this.ancho = 10;
         this.alto = 10;
-        this.distanciaTotal = 720;
+        this.distanciaTotal = 320;
         this.tipo = "proyectil";
         this.nombre = "acido";
     }
 
     draw() {
-        switch (this.dir) {
-            case 1:
-                image(imgacidoarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
-            case 2:
-                image(imgacidoabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
-            case 3:
-                image(imgacidoderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
-            case 4:
-                image(imgacidoizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-                break;
+        if (this.vida > 0) {
+            switch (this.dir) {
+                case 1:
+                    image(imgacidoarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 2:
+                    image(imgacidoabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 3:
+                    image(imgacidoderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
+                case 4:
+                    image(imgacidoizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
-
     }
 
 

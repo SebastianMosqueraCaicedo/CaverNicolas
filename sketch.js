@@ -307,13 +307,14 @@ function setup() {
   interfaz = new Interfaz(200, 0);
   jugador = new Jugador(350, 300);
   acido = new Acido(350, 80);
+  acido2 = new Acido(350, 140);
   puerta = new Puerta(250, 250);
   mapa = new Terrain();
   mapa.init();
 }
 
 function draw() {
-  console.log(".");
+
   background(220);
   ejemplo.draw();
   interfaz.estado = 1;
@@ -322,9 +323,21 @@ function draw() {
   pantalla.draw();
   pantalla.estado = 4;
   jugador.draw();
+  jugador.mover();
   mapa.show();
   if (pantalla.cambiarPantalla(jugador, puerta)) {
     mapa.init();
   }
-  acido.draw();
+    acido.draw();
+    acido.dir = 2;
+    acido.estado = 1;
+    acido.mover();
+    acido.tocado(jugador);
+
+    acido2.draw();
+    acido2.dir = 2;
+    acido2.mover();
+    acido2.tocado(jugador);
+
+
 }
