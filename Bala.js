@@ -9,15 +9,30 @@ class Bala extends Proyectil {
         this.vel = 5;
         this.ancho = 5;
         this.alto = 5;
+        this.distanciaTotal = 200;
         this.tipo = "proyectil";
         this.nombre = "bala";
     }
 
     draw() {
-        image(imgbalaabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgbalaarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgbaladerecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-        image(imgbalaizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        switch (this.dir) {
+            case 1:
+                image(imgbalaarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                break;
+            case 2:
+                image(imgbalaabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                break;
+            case 3:
+                image(imgbaladerecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                break;
+            case 4:
+                image(imgbalaizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+                break;
+
+            default:
+                break;
+        }
+
     }
 
 }

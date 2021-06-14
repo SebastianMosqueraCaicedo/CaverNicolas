@@ -9,6 +9,7 @@ class Roca extends Proyectil {
         this.vel = 2;
         this.ancho = 20;
         this.alto = 20;
+        this.distanciaTotal = 160;
         this.tipo = "proyectil";
         this.nombre = "roca";
     }

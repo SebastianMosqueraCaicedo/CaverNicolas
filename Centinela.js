@@ -11,7 +11,7 @@ class Centinela extends Actor {
         this.valor = 15;
         this.ancho = 30;
         this.alto = 30;
-        this.tipo = "estatico";
+        this.tipo = "caminador";
         this.nombre = "centinela";
     }
 

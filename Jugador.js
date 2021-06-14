@@ -20,8 +20,11 @@ class Jugador extends Actor {
         this.cantidadLlaves = 0;
         // cuenta la cantidad de Puntos
         this.cantidadPuntaje = 0;
+        // determina si y que esta disparando
+        this.disparando = 0;
         this.tipo = "jugador";
         this.nombre = "jonh";
+        this.contadorRecarga = 40;
     }
 
     draw() {

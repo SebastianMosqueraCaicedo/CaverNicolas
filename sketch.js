@@ -305,7 +305,8 @@ function setup() {
   ejemplo = new Abeja(200, 200);
   pantalla = new Pantalla(150, 0);
   interfaz = new Interfaz(200, 0);
-  jugador = new Jugador(424, 60);
+  jugador = new Jugador(350, 300);
+  acido = new Acido(350, 80);
   puerta = new Puerta(250, 250);
   mapa = new Terrain();
   mapa.init();
@@ -325,5 +326,5 @@ function draw() {
   if (pantalla.cambiarPantalla(jugador, puerta)) {
     mapa.init();
   }
-
+  acido.draw();
 }

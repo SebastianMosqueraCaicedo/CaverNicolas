@@ -14,20 +14,19 @@ class Actor extends Ent {
         this.vidaTotal = 1;
         // determina cuantas monedas tiene el actor
         this.monedas = 0;
-        // determina cuantos proyectiles ha creado el actor
-        this.proyectiles = [];
         // dice cuanta distacia ha recorrido el actor
         this.distancia = 0;
         // determina cuanto daño hace el actor
         this.dano = 0;
         // contador de fotogramas de invincibilidad
         this.invincibilidad = 0;
-
         //ancho de frente
         this.ancho = 23.05;
-
         //alto de frente
         this.alto = 40;
+        // determina cuanto se tarda recargando
+        this.contadorRecarga = 180;
+
     }
 
 
@@ -40,11 +39,19 @@ class Actor extends Ent {
         image(imgactorfrente, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
         image(imgactorartras, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
         image(imgactorartraspistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
-    
+
     }
 
+    // determina si esta disparando
 
-    
+    disparar() {
+        this.contadorRecarga--;
+        if (this.contadorRecarga === 0) {
+            //generalmente estado 1 es atacar
+            this.estado = 1;
+        }
+    }
+
     // mueve el actor dependiendo de su velocidad y direccion
 
     mover() {
@@ -72,6 +79,13 @@ class Actor extends Ent {
         }
     }
 
+    invincibilidadFrame() {
+        if (this.invincibilidad > 0) {
+            this.invincibilidad--;
+        }
+        return this.invincibilidad;
+    }
+
     // aplica daño general de los actores al jugador. entre mas daño, mas fotogramas de invincibilidad le da al jugador
 
     tocado(ent) {
@@ -88,7 +102,7 @@ class Actor extends Ent {
                 this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
                 this.getIzq() < ent.getDer() &&
                 this.getY() > ent.getSup() &&
-                this.getY() < ent.getInf()) && ent.tipo === "jugador" && ent.invincibilidad === 0) {
+                this.getY() < ent.getInf()) && ent.tipo === "jugador" && ent.invincibilidadFrame() === 0) {
             ent.vida -= this.dano;
             ent.invincibilidad = this.dano * 30;
         }
