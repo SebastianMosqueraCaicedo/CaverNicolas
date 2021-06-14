@@ -1,6 +1,4 @@
 // un actor que sigue al jugador y explota cuando lo toca o es disparado
-
-
 class Creeper extends Actor {
     constructor(x, y) {
         super(x, y);
@@ -12,10 +10,11 @@ class Creeper extends Actor {
         this.valor = 25;
         this.ancho =  16.67;
         this.alto = 20;
+
     }
 
     draw() {
         image(imgcreeper, this.x, this.y, this.ancho, this.alto);
     }
-    
+
 }
