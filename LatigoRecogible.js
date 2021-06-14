@@ -8,7 +8,7 @@ class LatigoRecogible extends Recogible {
 
 
     draw() {
-        image(imglatigor, this.x, this.y, this.ancho, this.alto);
+        image(imglatigor, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 

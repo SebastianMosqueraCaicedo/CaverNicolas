@@ -12,10 +12,10 @@ class Acido extends Proyectil {
     }
 
     draw() {
-        image(imgacidoabajo, this.x, this.y, this.ancho, this.alto);
-        image(imgacidoarriba, this.x, this.y, this.ancho, this.alto);
-        image(imgacidoderecha, this.x, this.y, this.ancho, this.alto);
-        image(imgacidoizquierda, this.x, this.y, this.ancho, this.alto);
+        image(imgacidoabajo, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgacidoarriba, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgacidoderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgacidoizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 

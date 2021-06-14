@@ -14,8 +14,8 @@ class Serpiente extends Actor {
     }
 
     draw() {
-        image(imgserpientenormal, this.x, this.y, this.ancho, this.alto);
-        image(imgserpienteroja, this.x, this.y, this.ancho, this.alto);
+        image(imgserpientenormal, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgserpienteroja, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
 
     }
 

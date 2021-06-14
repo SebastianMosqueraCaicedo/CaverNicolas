@@ -9,7 +9,7 @@ class CarrilRecogible extends Recogible {
     }
 
     draw() {
-        image(imgcarrilr, this.x, this.y, this.ancho, this.alto);
+        image(imgcarrilr, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 }

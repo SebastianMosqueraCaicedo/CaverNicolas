@@ -14,7 +14,7 @@ class Murcielago extends Actor {
     }
 
     draw() {
-        image(imgmurcielago, this.x, this.y, this.ancho, this.alto);
+        image(imgmurcielago, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 }

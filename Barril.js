@@ -8,7 +8,7 @@ class Barril extends Ambiente {
     }
 
     draw() {
-        image(imgbarril, this.x, this.y, this.ancho, this.alto);
+        image(imgbarril, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 }

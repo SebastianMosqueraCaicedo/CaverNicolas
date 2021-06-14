@@ -8,7 +8,7 @@ class Llave extends Recogible{
     }
 
     draw() {
-        image(imgllaver, this.x, this.y, this.ancho, this.alto);
+        image(imgllaver, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 }

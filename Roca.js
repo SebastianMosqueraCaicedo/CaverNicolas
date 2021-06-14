@@ -12,7 +12,7 @@ class Roca extends Proyectil {
     }
 
     draw() {
-        image(imgroca, this.x, this.y, this.ancho, this.alto);
+        image(imgroca, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 

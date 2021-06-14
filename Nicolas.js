@@ -9,14 +9,14 @@ class Nicolas extends Actor {
     }
 
     draw() {
-        image(imgabejaolasatras, this.x, this.y, this.ancho, this.alto);
-        image(imgnicolasderecha, this.x, this.y, this.ancho, this.alto);
-        image(imgnicolasderechamano, this.x, this.y, this.ancho, this.alto);
-        image(imgnicolasizquierda, this.x, this.y, this.ancho, this.alto);
-        image(imgnicolasizquierdamano, this.x, this.y, this.ancho, this.alto);
-        image(imagnicolasmuerte, this.x, this.y, this.ancho, this.alto);
-        image(imagnicolasnormal, this.x, this.y, this.ancho, this.alto);
-        image(imgnicolasfrente, this.x, this.y, this.ancho, this.alto);
+        image(imgabejaolasatras,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgnicolasderecha,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgnicolasderechamano,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgnicolasizquierda,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgnicolasizquierdamano,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imagnicolasmuerte,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imagnicolasnormal,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgnicolasfrente,this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
          
     }
 

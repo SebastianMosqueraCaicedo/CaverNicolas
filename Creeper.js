@@ -14,7 +14,7 @@ class Creeper extends Actor {
     }
 
     draw() {
-        image(imgcreeper, this.x, this.y, this.ancho, this.alto);
+        image(imgcreeper, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 }

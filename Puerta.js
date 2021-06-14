@@ -10,8 +10,8 @@ class Puerta extends Ambiente {
     }
 
     draw() {
-        image(imgpuertaabierta, this.x, this.y, this.ancho, this.alto);
-        image(imgpuertacerrada, this.x, this.y, this.ancho, this.alto);
+        image(imgpuertaabierta, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgpuertacerrada, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     }
 
 

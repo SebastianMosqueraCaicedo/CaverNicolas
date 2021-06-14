@@ -32,14 +32,14 @@ class Actor extends Ent {
 
 
     draw() {
-        image(imgactorderecha, this.x, this.y, this.ancho, this.alto);
-        image(imgactorizquierda, this.x, this.y, this.ancho, this.alto);
-        image(imgactorderechapistola, this.x, this.y, this.ancho, this.alto);
-        image(imgactorizquierdapistola, this.x, this.y, this.ancho, this.alto);
-        image(imgactorfrentepistola, this.x, this.y, this.ancho, this.alto);
-        image(imgactorfrente, this.x, this.y, this.ancho, this.alto);
-        image(imgactorartras, this.x, this.y, this.ancho, this.alto);
-        image(imgactorartraspistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorderecha, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorizquierda, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorderechapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorizquierdapistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorfrentepistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorfrente, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorartras, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
+        image(imgactorartraspistola, this.x - (this.ancho / 2), this.y - (this.alto / 2), this.ancho, this.alto);
     
     }
 
