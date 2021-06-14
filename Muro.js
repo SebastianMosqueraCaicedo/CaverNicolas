@@ -7,8 +7,6 @@ class Muro extends Ambiente {
         this.alto = 40;
     }
     draw() {
-        fill(0);
-        noStroke();
-rect(this.x,this.y,this.ancho,this.alto);
+
     }
 }
