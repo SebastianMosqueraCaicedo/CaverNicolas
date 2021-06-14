@@ -11,4 +11,9 @@ class Creeper extends Actor {
         this.monedas = 3;
         this.valor = 25;
     }
+
+    draw() {
+        image(imgcreeper, this.x, this.y, this.ancho, this.alto);
+    }
+    
 }

@@ -6,11 +6,11 @@ let imgcentinela;
 let imggusanorojo;
 let imgusanoAzul;
 let imgcreeper;
-let imghormiganormal
-let imghormigaverde
-let imgmurcielago
-let imgserpientenormal
-let imgserpienteroja
+let imghormiganormal;
+let imghormigaverde;
+let imgmurcielago;
+let imgserpientenormal;
+let imgserpienteroja;
 
 //Jonh
 let imgactorderecha;
@@ -62,6 +62,7 @@ let imagnicolasnormal;
 
 //objetos
 let imgbarril;
+let imgcarril;
 let imgcarro;
 let imgcorazon0vida;
 let imgcorazonmediavida;
@@ -200,6 +201,7 @@ function preload() {
   imgpuertaabierta = loadImage ('data/objetos/puerta_abierta.png');
   imgpuertacerrada = loadImage ('data/objetos/puerta_cerrada.png');
   imgsimioazul = loadImage ('data/objetos/simio_azul.png');
+  imgcarril =  loadImage ('data/objetos/carril.png');
 
   //pantallas
   imggameover = loadImage('data/pantallas/gameover.png');

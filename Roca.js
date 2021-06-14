@@ -8,4 +8,10 @@ class Roca extends Proyectil {
         this.dano = 3;
         this.vel = 2;
     }
+
+    draw() {
+        image(imgroca, this.x, this.y, this.ancho, this.alto);
+    }
+
+
 }

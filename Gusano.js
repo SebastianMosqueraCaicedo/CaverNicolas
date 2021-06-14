@@ -11,4 +11,10 @@ class Gusano extends Actor {
         this.monedas = 2;
         this.valor = 20;
     }
+
+    draw() {
+        image(imggusanorojo, this.x, this.y, this.ancho, this.alto);
+        image(imgusanoAzul, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

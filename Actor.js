@@ -23,6 +23,21 @@ class Actor extends Ent {
         // contador de fotogramas de invincibilidad
         this.invincibilidad = 0;
     }
+
+
+    draw() {
+        image(imgactorderecha, this.x, this.y, this.ancho, this.alto);
+        image(imgactorizquierda, this.x, this.y, this.ancho, this.alto);
+        image(imgactorderechapistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorizquierdapistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorfrentepistola, this.x, this.y, this.ancho, this.alto);
+        image(imgactorfrente, this.x, this.y, this.ancho, this.alto);
+        image(imgactorartras, this.x, this.y, this.ancho, this.alto);
+        image(imgactorartraspistola, this.x, this.y, this.ancho, this.alto);
+    
+    }
+
+
     
     // mueve el actor dependiendo de su velocidad y direccion
 

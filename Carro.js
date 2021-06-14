@@ -4,4 +4,9 @@ class Carro extends Actor {
     constructor(x, y) {
         super(x, y);
     }
+
+    draw() {
+        image(imgcarro, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

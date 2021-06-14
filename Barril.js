@@ -4,4 +4,9 @@ class Barril extends Ambiente {
     constructor(x, y) {
         super(x, y);
     }
+
+    draw() {
+        image(imgbarril, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

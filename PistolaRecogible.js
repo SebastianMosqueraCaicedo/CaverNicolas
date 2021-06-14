@@ -4,4 +4,8 @@ class PistolaRecogible extends Recogible {
         super(x, y);
     }
 
+    draw() {
+        image(imgpistolar, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

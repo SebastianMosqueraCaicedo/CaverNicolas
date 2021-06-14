@@ -8,5 +8,9 @@ class Moneda extends Recogible {
         return this.cantidad;
     }
 
+    draw() {
+        image(imgmonedar, this.x, this.y, this.ancho, this.alto);
+    }
+
 
 }

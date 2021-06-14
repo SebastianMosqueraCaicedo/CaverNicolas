@@ -8,4 +8,12 @@ class Bala extends Proyectil {
         this.dano = 1;
         this.vel = 5;
     }
+
+    draw() {
+        image(imgbalaabajo, this.x, this.y, this.ancho, this.alto);
+        image(imgbalaarriba, this.x, this.y, this.ancho, this.alto);
+        image(imgbaladerecha, this.x, this.y, this.ancho, this.alto);
+        image(imgbalaizquierda, this.x, this.y, this.ancho, this.alto);
+    }
+
 }

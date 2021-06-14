@@ -10,4 +10,11 @@ class Hormiga extends Actor {
         this.monedas = 1;
         this.valor = 15;
     }
+
+    draw() {
+        image(imghormiganormal, this.x, this.y, this.ancho, this.alto);
+        image(imghormigaverde, this.x, this.y, this.ancho, this.alto);
+        
+    }
+
 }

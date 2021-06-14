@@ -10,4 +10,11 @@ class Serpiente extends Actor {
         this.monedas = 1;
         this.valor = 5;
     }
+
+    draw() {
+        image(imgserpientenormal, this.x, this.y, this.ancho, this.alto);
+        image(imgserpienteroja, this.x, this.y, this.ancho, this.alto);
+
+    }
+
 }
