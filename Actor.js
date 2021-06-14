@@ -48,7 +48,9 @@ class Actor extends Ent {
 
     mover() {
         if (this.estado != 0 || this.vida > 0) {
-
+            if (this.distancia === 0) {
+                this.moviendose = false;
+            }
             if (this.moviendose === true && this.distancia > 0) {
                 this.distancia -= this.vel;
                 switch (this.dir) {
@@ -132,34 +134,6 @@ class Actor extends Ent {
     // retorna la direccion actual    
     getDir() {
         return this.dir;
-    }
-
-    // retorna las casillas consecuentes
-
-    //superior
-    getCasillaSupY() {
-        return (this.fil - 1);
-    }
-
-    getCasillaSupX() {
-        return this.col;
-    }
-
-    //inferior
-    getCasillaInf() {
-        return (this.fil + 1);
-    }
-
-    getCasillaSupX() {
-        return this.col;
-    }
-
-    getCasillaIzq() {
-        return (this.fil - 1);
-    }
-
-    getcasillaDer() {
-        return (this.fil + 1);
     }
 
 }
