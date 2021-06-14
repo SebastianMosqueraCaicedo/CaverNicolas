@@ -30,37 +30,37 @@ class Interfaz extends Ent {
             switch (this.contaVida) {
                 case 6:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazontodavida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazontodavida, 59, 410, this.ancho, this.alto);
                     image(imgcorazontodavida, 105, 410, this.ancho, this.alto);
                     break;
                 case 5:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazontodavida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazontodavida, 59, 410, this.ancho, this.alto);
                     image(imgcorazonmediavida, 105, 410, this.ancho, this.alto);
                     break;
                 case 4:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazontodavida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazontodavida, 59, 410, this.ancho, this.alto);
                     image(imgcorazon0vida, 105, 410, this.ancho, this.alto);
                     break;
                 case 3:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazonmediavida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazonmediavida, 59, 410, this.ancho, this.alto);
                     image(imgcorazon0vida, 105, 410, this.ancho, this.alto);
                     break;
                 case 2:
                     image(imgcorazontodavida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazon0vida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazon0vida, 59, 410, this.ancho, this.alto);
                     image(imgcorazon0vida, 105, 410, this.ancho, this.alto);
                     break;
                 case 1:
                     image(imgcorazonmediavida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazon0vida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazon0vida, 59, 410, this.ancho, this.alto);
                     image(imgcorazon0vida, 105, 410, this.ancho, this.alto);
                     break;
                 case 0:
                     image(imgcorazon0vida, 12, 410, this.ancho, this.alto);
-                    image(imgcorazon0vida, 60, 410, this.ancho, this.alto);
+                    image(imgcorazon0vida, 59, 410, this.ancho, this.alto);
                     image(imgcorazon0vida, 105, 410, this.ancho, this.alto);
                     break;
                 default:

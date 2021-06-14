@@ -243,6 +243,7 @@ function setup() {
   ejemplo = new Abeja(200, 200);
   interfaz = new Interfaz(200, 200);
   jugador = new Jugador(200, 200);
+  cartel = new Cartel (200,200);
 }
 
 function draw() {
@@ -251,7 +252,8 @@ function draw() {
   interfaz.draw(jugador);
   interfaz.contar(jugador);
   jugador.draw();
-  jugador.monedas = 5;
+  cartel.draw()
+  jugador.monedas = 0;
   interfaz.estado = 1;
   
 }
