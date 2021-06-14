@@ -136,4 +136,18 @@ class Actor extends Ent {
         return this.dir;
     }
 
+    // retorna la posicion anterior en
+
+    getPastX() {
+        if (this.moviendose === false) {
+            return this.x;
+        }
+    }
+
+    getPastY() {
+        if (this.moviendose === false) {
+            return this.y;
+        }
+    }
+
 }
