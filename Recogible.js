@@ -9,9 +9,29 @@ class Recogible extends Ent {
 
     // cambia el estado de recogido
 
-    recoger() {
-        if (this.tocado() === "jugador") {
+    recoger(jugador) {
+        if (this.tocado(jugador) === "jugador" && this.recogido === false) {
             this.recogido = true;
+            switch (this.nombre) {
+                case "pocima":
+                    jugador.cantidadPocimas += 1;
+                    break;
+
+                case "llave":
+                    jugador.cantidadLlaves += 1;
+                    break;
+
+                case "carrilR":
+                    jugador.cantidadCarriles += 1;
+                    break;
+
+                case "pocima":
+                    jugador.cantidadPocimas += this.cantidad;
+                    break;
+
+                default:
+                    break;
+            }
         }
     }
 }
