@@ -3,6 +3,7 @@
 class Jugador extends Actor {
     constructor(x, y) {
         super(x, y);
+        this.dir = 0;
         this.vida = 6;
         this.vidaTotal = 6
         this.vel = 4;
@@ -51,7 +52,9 @@ class Jugador extends Actor {
     }
 
     draw() {
+
         if (this.vida > 0) {
+            this.movimiento();
             this.disparar();
             switch (this.dir) {
                 case 1:
@@ -154,6 +157,23 @@ class Jugador extends Actor {
             }
         }
     }
+
+    movimiento() {
+        if (this.moviendose === false) {
+            if (this.dir === 1 || this.dir === 2) {
+                this.distancia = 40 + this.alto / 2;
+            }
+            if (this.dir === 3 || this.dir === 4) {
+                this.distancia = 40 + this.ancho / 2;
+            }
+        }
+        if (this.dir != 0) {
+            this.moviendose = true;
+        } else {
+            this.moviendose = false;
+        }
+    }
+
 
     // devuelve la cantidad de monedas que tiene el jugador
 

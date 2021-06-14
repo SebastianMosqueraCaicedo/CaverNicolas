@@ -52,7 +52,9 @@ class Actor extends Ent {
             if (dist(this.x, this.y, this.getPastX, this.getPastY) === 40) {
                 this.moviendose = false;
             }
-
+            if (this.distancia < 0) {
+                this.distancia = 0;
+            }
             if (this.moviendose === true && this.distancia > 0) {
                 this.distancia -= this.vel;
                 switch (this.dir) {
@@ -86,9 +88,17 @@ class Actor extends Ent {
     // el movimiento base es aleatorio
 
     movimiento() {
-        this.dir = random(1, 4);
-        if (frameCount % random(60, 180) && this.moviendose === false) {
-            this.moviendose = true;
+        if (this.moviendose === false) {
+            this.dir = round(random(1, 4));
+            if (this.dir === 1 || this.dir === 2) {
+                this.distancia = 40 + this.alto / 2;
+            }
+            if (this.dir === 3 || this.dir === 4) {
+                this.distancia = 40 + this.ancho / 2;
+            }
+            if (frameCount % round(random(60, 180)) && this.moviendose === false) {
+                this.moviendose = true;
+            }
         }
     }
 
@@ -160,6 +170,13 @@ class Actor extends Ent {
         if (this.moviendose === false) {
             return this.y;
         }
+    }
+
+    // setters de direccion
+
+    setDir(num) {
+        this.dir = num;
+
     }
 
 }

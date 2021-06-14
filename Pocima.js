@@ -3,8 +3,8 @@
 class Pocima extends Recogible {
     constructor(x, y) {
         super(x, y);
-        this.ancho = 40;
-        this.alto = 40;
+        this.ancho = 20;
+        this.alto = 20;
         this.tipo = "recogible";
         this.nombre = "pocima";
     }

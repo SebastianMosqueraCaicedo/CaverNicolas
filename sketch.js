@@ -251,22 +251,21 @@ function setup() {
   pantalla = new Pantalla(150, 0);
   interfaz = new Interfaz(200, 0);
   jugador = new Jugador(350, 300);
-  acido = new Bala(350, 80);
   centinela123 = new Centinela(350, 180);
   puerta123 = new Puerta(250, 250);
 
 
   //posiciones centinela
-  centinela[0] = new Centinela(240, 350);
-  centinela[1] = new Centinela(450,220);
+  centinela[0] = new Centinela(250, 150);
+  centinela[1] = new Centinela(450, 220);
 
   //la pocima
-  pocima[0] = new Pocima(470, 42);
+  pocima[0] = new Pocima(490, 60);
 
 
   //gusanos
   gusano[0] = new Gusano(200, 300);
-  gusano[1] = new Gusano(207,58);
+  gusano[1] = new Gusano(207, 58);
   gusano[2] = new Gusano(493, 346);
 
   //muros
@@ -279,7 +278,7 @@ function setup() {
 
 function draw() {
   //posicion mouse
-  console.log(mouseX, mouseY);
+  //console.log(mouseX, mouseY);
 
   background(220);
   ejemplo.draw();
@@ -291,24 +290,39 @@ function draw() {
   jugador.draw();
   jugador.mover();
 
-  acido.draw();
-  acido.dir = 2;
-  acido.estado = 1;
-  acido.mover();
-  acido.tocado(jugador);
-
   centinela123.draw();
   centinela123.dir = 2;
 
-    centinela[0].draw();
-    centinela[1].draw();
+  centinela[0].draw();
+  centinela[1].draw();
 
-    pocima[0].draw();
+  pocima[0].draw();
+  console.log(jugador);
+  gusano[0].draw();
+  gusano[0].mover();
+  gusano[0].estado = 1;
+  gusano[1].draw();
+  gusano[2].draw();
 
-    gusano[0].draw();
-    gusano[1].draw();
-    gusano[2].draw();
+  creeper[0].draw();
 
-    creeper[0].draw();
-  
+}
+
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    jugador.setDir(3);
+  }
+  if (keyCode === RIGHT_ARROW) {
+    jugador.setDir(4);
+  }
+  if (keyCode === UP_ARROW) {
+    jugador.setDir(1);
+  }
+  if (keyCode === DOWN_ARROW) {
+    jugador.setDir(2);
+  }
+}
+
+function keyReleased() {
+  jugador.setDir(0);
 }
