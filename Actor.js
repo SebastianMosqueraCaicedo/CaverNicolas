@@ -94,7 +94,8 @@ class Actor extends Ent {
                 this.getY() < ent.getInf() || this.getIzq() > ent.getIzq() &&
                 this.getIzq() < ent.getDer() &&
                 this.getY() > ent.getSup() &&
-                this.getY() < ent.getInf()) && ent.tipo === "jugador" && ent.invincibilidadFrame() === 0) {
+                this.getY() < ent.getInf()) && ent.tipo === "jugador" && 
+                ent.invincibilidadFrame() === 0) {
             ent.vida -= this.dano;
             ent.invincibilidad = this.dano * 30;
         }
@@ -102,19 +103,19 @@ class Actor extends Ent {
     }
 
     muerte() {
-        if (this.vida === 0) {
+        if (this.vida <= 0) {
             this.contadorMuerte++;
             if (this.contadorMuerte > 0 &&
                 this.contadorMuerte < 19) {
-                image(imghumo1_1, this.x - (this.ancho / 2), this.y - (this.alto / 2), 40, 40)
+                image(imghumo1_1, this.x - 20, this.y - 20, 40, 40)
             }
             if (this.contadorMuerte >= 19 &&
                 this.contadorMuerte < 39) {
-                image(imghumo1_2, this.x - (this.ancho / 2), this.y - (this.alto / 2), 40, 40)
+                image(imghumo1_2, this.x - 20, this.y - 20, 40, 40)
             }
             if (this.contadorMuerte > 39 &&
                 this.contadorMuerte < 60) {
-                image(imghumo1_3, this.x - (this.ancho / 2), this.y - (this.alto / 2), 40, 40)
+                image(imghumo1_3, this.x - 20, this.y - 20, 40, 40)
             }
         }
     }

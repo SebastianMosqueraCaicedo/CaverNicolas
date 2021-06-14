@@ -307,14 +307,14 @@ function setup() {
   interfaz = new Interfaz(200, 0);
   jugador = new Jugador(350, 300);
   acido = new Acido(350, 80);
-  acido2 = new Acido(350, 140);
+  acido2 = new Acido(350, 180);
   puerta = new Puerta(250, 250);
   mapa = new Terrain();
   mapa.init();
 }
 
 function draw() {
-
+  console.log(mouseX,mouseY);
   background(220);
   ejemplo.draw();
   interfaz.estado = 1;

@@ -14,7 +14,7 @@ class Proyectil extends Actor {
 
     mover() {
 
-        console.log(this.distancia);
+
 this.acelerar();
 
         if (this.vida != 0) {
