@@ -253,4 +253,5 @@ function draw() {
   jugador.draw();
   jugador.monedas = 5;
   interfaz.estado = 1;
+  
 }
