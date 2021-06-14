@@ -8,7 +8,9 @@ class Bala extends Proyectil {
         this.dano = 1;
         this.vel = 5;
         this.ancho = 5;
-        this. alto = 5;
+        this.alto = 5;
+        this.tipo = "proyectil";
+        this.nombre = "bala";
     }
 
     draw() {

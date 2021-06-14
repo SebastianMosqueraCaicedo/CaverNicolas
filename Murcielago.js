@@ -11,6 +11,8 @@ class Murcielago extends Actor {
         this.valor = 15;
         this.ancho = 20;
         this.alto = 7.78;
+        this.tipo = "volador";
+        
     }
 
     draw() {
