@@ -22,6 +22,12 @@ class Actor extends Ent {
         this.dano = 0;
         // contador de fotogramas de invincibilidad
         this.invincibilidad = 0;
+
+        //ancho de frente
+        this.ancho = 23.05;
+
+        //alto de frente
+        this.alto = 40;
     }
 
 

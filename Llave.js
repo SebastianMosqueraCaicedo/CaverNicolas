@@ -2,7 +2,9 @@
 
 class Llave extends Recogible{
     constructor(x,y){
-        super(x,y);    
+        super(x,y);
+        this.ancho = 38;
+        this.alto = 12.29;    
     }
 
     draw() {

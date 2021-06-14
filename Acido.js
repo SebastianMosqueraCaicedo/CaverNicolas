@@ -7,6 +7,8 @@ class Acido extends Proyectil {
         this.vidaTotal = 1;
         this.dano = 2;
         this.vel = 2;
+        this.ancho = 10; 
+        this.alto = 10;
     }
 
     draw() {

@@ -3,6 +3,9 @@
 class Nicolas extends Actor {
     constructor(x, y) {
         super(x, y);
+        this.ancho = 24.21;
+        this.alto = 40;
+        
     }
 
     draw() {

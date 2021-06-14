@@ -3,6 +3,8 @@
 class Barril extends Ambiente {
     constructor(x, y) {
         super(x, y);
+        this.ancho = 38;
+        this.alto = 40;
     }
 
     draw() {

@@ -2,6 +2,8 @@
 class Cofre extends Recogible {
     constructor(x, y) {
         super(x, y);
+        this.anchos = 40;
+        this.alto = 30.3;
     }
 
     draw() {

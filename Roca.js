@@ -7,6 +7,8 @@ class Roca extends Proyectil {
         this.vidaTotal = 1;
         this.dano = 3;
         this.vel = 2;
+        this.ancho = 20;
+        this.alto = 20;
     }
 
     draw() {

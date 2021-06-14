@@ -3,6 +3,8 @@ class Moneda extends Recogible {
     constructor(x, y) {
         super(x, y);
         this.cantidad = 1;
+        this.ancho = 15;
+        this.alto = 13.5;
     }
     getCantidad() {
         return this.cantidad;

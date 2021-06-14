@@ -2,6 +2,8 @@ class LatigoRecogible extends Recogible {
 
     constructor(x, y) {
         super(x, y);
+        this.ancho = 36;
+        this.alto = 36;
     }
 
 

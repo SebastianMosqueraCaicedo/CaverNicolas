@@ -9,6 +9,8 @@ class Centinela extends Actor {
         this.vel = 0;
         this.monedas = 2;
         this.valor = 15;
+        this.ancho = 30;
+        this.alto = 30;
     }
 
     draw() {

@@ -4,6 +4,9 @@ class Puerta extends Ambiente {
     constructor(x, y, identificador) {
         super(x, y);
         this.identificador = identificador;
+        this.ancho = 29;
+        this.alto = 40;
+
     }
 
     draw() {

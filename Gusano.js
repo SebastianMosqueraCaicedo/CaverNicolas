@@ -10,6 +10,8 @@ class Gusano extends Actor {
         this.vel = 5;
         this.monedas = 2;
         this.valor = 20;
+        this.ancho = 10.3;
+        this.alto = 20;
     }
 
     draw() {

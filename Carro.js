@@ -3,6 +3,8 @@
 class Carro extends Actor {
     constructor(x, y) {
         super(x, y);
+        this.ancho = 25;
+        this.alto = 25;
     }
 
     draw() {

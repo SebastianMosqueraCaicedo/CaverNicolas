@@ -9,6 +9,8 @@ class Serpiente extends Actor {
         this.vel = 3;
         this.monedas = 1;
         this.valor = 5;
+        this.ancho = 40;
+        this.alto = 8.52;
     }
 
     draw() {

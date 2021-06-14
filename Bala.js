@@ -7,6 +7,8 @@ class Bala extends Proyectil {
         this.vidaTotal = 1;
         this.dano = 1;
         this.vel = 5;
+        this.ancho = 5;
+        this. alto = 5;
     }
 
     draw() {
